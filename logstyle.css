@@ -1,0 +1,125 @@
+body {
+    background-color: #1a1a1a;
+
+    font-family: Arial, Helvetica, sans-serif;
+    
+    margin: 7% 5% 5% 5%;
+
+}
+
+h1 {
+    color: #ededed;
+    font-size: 4.5em;
+    font-weight: lighter;
+
+    margin-bottom: 0px;
+
+}
+
+h2 {
+    color: #ededed;
+    font-size: 2.5em;
+    font-weight: lighter;
+
+    margin-top: 20px;
+    line-height: 1.2em;
+}
+
+button {
+    background-color #c4c4c4;
+
+    border-style: none;
+    border-radius: 50px;
+
+    margin-top: 10px;
+    margin-bottom: 2em;
+
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #5a5a5a;
+    color: #ededed;
+    
+}
+
+#accentbtn {
+    background-color: #bee09c;
+
+    border-style: none;
+    border-radius: 50px;
+
+    margin-right: 20px;
+    size: 5em;
+}
+
+#accentbtn:hover {
+    background-color:  #478d01;
+    color: #ededed;
+}
+
+#subtitle {
+    font-size: 1.2em;
+    color: #c4c4c4;
+
+    margin-bottom: 3em;
+}
+
+form {
+    color: #ededed;
+    font-size: 1.2em;
+}
+
+input[type=text], input[type=password], input[type=email]  {
+    background-color: #1a1a1a;
+    color: #ededed;
+
+    border-color: #ededed;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 1px;
+
+
+    height: 2em;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.twocol {
+    float: left;
+    width: 25%;
+    overflow: auto;
+
+    margin-right: 5em;
+    padding-right: 2em;
+
+    border-width: 1px;
+    border-right: solid;
+    border-color: #c4c4c4;
+}
+
+.vl {
+    border-left: 2px solid green;
+    height: 100px;
+}
+
+#right {
+    margin-left: 0em;
+}
+
+#footer {
+        position: fixed;
+        height: 65px;
+        background-color:#bee09c;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+}
+
+#sosumi {
+    margin-left: 5%;
+    color: #1a1a1a;
+    font-size: 0.9em;
+}
