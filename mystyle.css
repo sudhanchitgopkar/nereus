@@ -82,3 +82,8 @@ input[type=submit]:hover {
         display: flex;
         align-items: center;
       }
+
+input {
+  background-color: #1a1a1a;
+  color: #ededed;
+}
