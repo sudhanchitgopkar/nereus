@@ -6,6 +6,14 @@
 	$dbname = "nereus";
 
         // Create connection
-        $mysqli = new mysqli($servername, $username, $password, $dbname);
-
+        try {
+            $mysqli = new mysqli($servername, $username, $password, $dbname);
+             echo 'Connected successfully<br>';
+          }
+          catch (PDOException $e)
+          {
+            $error=$e->getMessage();
+            echo '<p> Unable to connect to database: ' .$error;
+            exit();
+          }
     ?> 
