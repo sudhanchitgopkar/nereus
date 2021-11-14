@@ -41,9 +41,9 @@
         <br />
         <label for="password">Password:</label>
         <input type="password" name="password" />
-        <!-- <input id="accentbtn" type="submit" value="Login" /> -->
-        <button id="accentbtn" type="submit">Log In</button>
-        <button>Forgot Password?</button>
+        <input id="accentbtn" type="submit" value="Login" /> 
+        <!-- <button id="accentbtn" type="submit">Log In</button> -->
+        <!-- <button>Forgot Password?</button> -->
         <!-- <input id="accentbtn" type="submit" value="Login" id="submit" />
         <button>Forgot Password?</button> -->
       </form>
