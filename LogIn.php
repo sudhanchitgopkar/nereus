@@ -1,4 +1,6 @@
 <?php
+
+  
     //==================== CONNECTING TO DB ====================//
         $servername = "localhost"; 
         $username = "root"; //default username
@@ -42,6 +44,7 @@
         <label for="password">Password:</label>
         <input type="password" name="password" />
         <input id="accentbtn" type="submit" value="Login" /> 
+        <input type="submit" value="Forgot Password?"><br>
         <!-- <button id="accentbtn" type="submit">Log In</button> -->
         <!-- <button>Forgot Password?</button> -->
         <!-- <input id="accentbtn" type="submit" value="Login" id="submit" />
@@ -54,7 +57,7 @@
 
     
       <h2>Register</h2>
-      <form id="right" action="cookies.php" method="post">
+      <form id="right" action="LogIn.php" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" />
         <br />
