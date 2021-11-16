@@ -1,19 +1,21 @@
 <?php
     //==================== CONNECTING TO DB ====================//
-        $servername = "localhost"; 
-        $username = "root"; //default username
-        $password = "";     //default pass
-	$dbname = "nereus";
+        $db = parse_ini_file("config.ini");
+
+        $servername = $db['dbhost']; 
+        $username = $db['dbuser'];  //default username
+        $password = $db['dbpass'];      //default pass
+        $dbname = $db['dbname']; 
 
         // Create connection
         try {
-            $mysqli = new mysqli($servername, $username, $password, $dbname);
-             echo 'Connected successfully<br>';
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            //  echo 'Connected successfully<br>';
           }
           catch (PDOException $e)
           {
             $error=$e->getMessage();
-            echo '<p> Unable to connect to database: ' .$error;
+            // echo '<p> Unable to connect to database: ' .$error;
             exit();
           }
     ?> 
