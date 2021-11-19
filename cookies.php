@@ -26,6 +26,7 @@
         $count = mysqli_num_rows($qry);
         if($count==1) {
             $_SESSION['user'] = $username;
+            setcookie("mycookie", TRUE, time()+6);
         echo "Login Success";
         } else {
             echo 'Login Failure after succ';
