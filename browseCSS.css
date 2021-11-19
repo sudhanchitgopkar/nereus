@@ -1,0 +1,36 @@
+.color {
+    color: #FDAB30;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    border-radius: 30px;
+}
+
+.topBar {
+    padding-left: 1050px;
+    display: inline-block; 
+}
+
+html {
+    background: linear-gradient(325.44deg, #FDAB30 -73.43%, rgba(253, 171, 48, 0) 99.46%) fixed;
+}
+.font {
+    font-family: Nunito;
+}
+
+  
+.box {
+    background-color: #EDEDED;
+    width: 200px;
+    border: 2px solid black;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 30px;
+    padding-bottom: 150px;
+    padding-top: 100px;
+    margin-left: 490px;
+}
