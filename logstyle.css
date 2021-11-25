@@ -1,125 +1,158 @@
 body {
-    background-color: #1a1a1a;
-
-    font-family: Arial, Helvetica, sans-serif;
-    
-    margin: 7% 5% 5% 5%;
-
+	background-image:linear-gradient(111.57deg, #EDEDED 0%, #FDAB30 150%);;
 }
 
-h1 {
-    color: #ededed;
-    font-size: 4.5em;
-    font-weight: lighter;
+.N-logo { 
+	color:#FDAB30;
+	position:absolute;
+	left:41px;
+	top:25px;
+	font-family:Nunito;
+	text-align:left;
+	font-size:60px;
+}
+.box { 
+	box-shadow:5px 5px 10px rgba(0, 0, 0, 0.25);
+	background-color:#EDEDED;
+	width: 1000px;
+	height:550px;
+	position:absolute;
+	left:15%;
+	top:130px;
+    border: 2px solid #5A5A5A;
+    border-radius: 45px;
+}
 
-    margin-bottom: 0px;
+.left {
+    width: 500px;
+	height:550px;
+    position:absolute;
+	right: 50%;
+    /* margin-right: 25px; */
+    font-family: Nunito;
+    background-color: #F0E0C7;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
 
+img {
+    width: 500px;
+	height:550px;
+    /* background-color: #F0E0C7; */
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-right: 2px solid #5A5A5A;
+}
+
+.right {
+    text-align:left;
+    width: 500px;
+	height:500px;
+    position:absolute;
+	left:50%;
+    margin-left: 25px;
+    font-family: Nunito;
+}
+
+
+input {
+    border: 1.5px solid #5A5A5A;
+    border-radius: 15px;
+    padding: 12px 20px;
+    background-color: #EDEDED;
+    width: 275px;
+    height: 50px;
+}
+
+input[type=text] {
+    margin-bottom: 35px; 
+}
+
+input[type=password] {
+    margin-bottom: 35px; 
+}
+
+input[type=email] {
+    margin-bottom: 15px; 
+    margin-left: 30px;
 }
 
 h2 {
-    color: #ededed;
-    font-size: 2.5em;
-    font-weight: lighter;
-
-    margin-top: 20px;
-    line-height: 1.2em;
-}
-
-button {
-    background-color: #c4c4c4;
-
-    border-style: none;
-    border-radius: 50px;
-
-    margin-top: 10px;
-    margin-bottom: 2em;
-
-    padding: 10px 20px;
-    font-size: 1.1em;
-}
-
-button:hover {
-    background-color: #5a5a5a;
-    color: #ededed;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 10px;
     
 }
 
-#accentbtn {
-    background-color: #bee09c;
-
-    border-style: none;
-    border-radius: 50px;
-
-    margin-right: 20px;
-    size: 5em;
-}
-
-#accentbtn:hover {
-    background-color:  #478d01;
-    color: #ededed;
-}
-
-#subtitle {
-    font-size: 1.2em;
-    color: #c4c4c4;
-
-    margin-bottom: 3em;
-}
-
-form {
-    color: #ededed;
-    font-size: 1.2em;
-}
-
-input[type=text], input[type=password], input[type=email]  {
-    background-color: #1a1a1a;
-    color: #ededed;
-
-    border-color: #ededed;
-    border-style: solid;
-    border-radius: 25px;
-    border-width: 1px;
-
-
-    height: 2em;
+.log-form {
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: 900;
+    margin-top: 60px;
+    margin-right: 50px;
     margin-left: 10px;
-    margin-bottom: 10px;
 }
 
-.twocol {
-    float: left;
-    width: 25%;
-    overflow: auto;
-
-    margin-right: 5em;
-    padding-right: 2em;
-
-    border-width: 1px;
-    border-right: solid;
-    border-color: #c4c4c4;
+.reg-form {
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: 900;
+    margin-top: 40px;
+    margin-right: 50px;
+    text-align: center;
 }
 
-.vl {
-    border-left: 2px solid green;
-    height: 100px;
+.login-button {
+    background-color: #FDAB30;
+    border: 2px solid #FDAB30;
+    margin-left: 60px;
 }
 
-#right {
-    margin-left: 0em;
+.forgot-pass-button {
+    background-color: black;
+    border: 2px solid black;
 }
 
-#footer {
-        position: fixed;
-        height: 65px;
-        background-color:#bee09c;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        margin-bottom: 0px;
+.register-button {
+    background-color: #FDAB30;
+    border: 2px solid #FDAB30;
+    margin-left: 60px;
 }
 
-#sosumi {
-    margin-left: 5%;
-    color: #1a1a1a;
-    font-size: 0.9em;
+.learn-more-button {
+    background-color: black;
+    border: 2px solid black;
+}
+
+button {
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    font-family: Nunito;
+    border-radius: 15px;
+    margin-left: 30px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.log-h3 {
+    font-family: Roboto;
+    margin-top: 65px;
+    margin-left: 10px;
+}
+
+.reg-h3 {
+    font-family: Roboto;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    opacity: 0.8;
 }
