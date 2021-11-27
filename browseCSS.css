@@ -50,25 +50,16 @@ html {
   }
 
 .otherBox {
-  /* width: 520px;
-  height: 515px; */
   background: rgba(237,237,237,0.800000011920929);
   opacity: 1;
   position: absolute;
-  /* top: 376px;
-  left: 673px; */
   border: 3px solid rgba(0,0,0,1);
-  /* border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px; */
   overflow: hidden;
   background-color: #EDEDED;
     border: 2px solid black;
     padding: 50px;
     margin: 20px;
     border-radius: 30px;
-    /* margin-left: 520px; */
     padding-left: 20px;
     padding-top: 20px;
     position: absolute;
@@ -82,3 +73,17 @@ html {
     font-size: 20px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }
+  .grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    height: 350px;
+  }

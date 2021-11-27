@@ -95,7 +95,7 @@
                 </div>
             </div> -->
 
-            <!-- FROM THE VIDEO -->
+            <!-- FROM THE VIDEO BUT ITS BOOTSTRAP-->
             <div class="container py-5">
                 <div class="row mt-4">
                     <?php
@@ -126,4 +126,32 @@
                         echo "No users found";
                     }
                     ?>
-                    
+                  <!-- COULD WORK NOT BOOTSTRAP -->  
+                <div class="grid-container">
+                    <?php
+                    //require database connection
+                    // require ('connDB.php');
+                        $query = "SELECT * FROM accountInfo";
+                        $query_run = mysqli_query($conn, $query);
+
+                        $check_user = mysqli_num_rows() > 0;
+
+                        if($check_user) {
+                            while($row = mysqli_fetch_assoc($query_run)) { //could be array
+                    ?>
+                    <div class="grid-item">
+                        <img src=" <?php echo $row['image'] ?> " width="200px" height="200px" alt="Profile Pic">  <!-- type in path into src -->   
+                        <div class="card-body">
+                            <h2 class="card-title"> <?php echo $row['username']; ?> </h2> <!--username would be name first and last -->
+                            <p class="card-text"> <?php echo $row['email']; ?>  </p> <!--bio would be name first and last -->
+                        </div>
+                    </div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">1</div>
+                </div>
