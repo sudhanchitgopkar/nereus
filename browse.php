@@ -13,9 +13,9 @@
         // echo sizeof($result);
         // echo [$result] . "<br>";
         // var_dump($result);
-        // foreach($result as $row) {
-        //     echo $row . "<br>";
-        // }
+        foreach($result as $row) {
+            echo $row['username'] . "<br>";
+        }
         $check_user = $result->num_rows > 0;
         if($result->num_rows == 0) {
             echo "no results";
