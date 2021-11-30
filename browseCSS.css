@@ -1,0 +1,89 @@
+.color {
+    color: #FDAB30;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    border-radius: 30px;
+}
+
+.topBar {
+    padding-left: 1050px;
+    display: inline-block; 
+}
+
+html {
+    background: linear-gradient(325.44deg, #FDAB30 -73.43%, rgba(253, 171, 48, 0) 99.46%) fixed;
+}
+.font {
+    font-family: Nunito;
+}
+  
+.frontBox {
+    background-color: #EDEDED;
+    border: 2px solid black;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 30px;
+    margin-left: 520px;
+    padding-left: 20px;
+    padding-top: 20px;
+    position: absolute;
+    width: 300px;
+    padding-right: 20px;
+    height: 300px;
+    padding-bottom: 20px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 50px;
+    background: #FDAB30;
+    display: inline-block; 
+
+  }
+
+.otherBox {
+  background: rgba(237,237,237,0.800000011920929);
+  opacity: 1;
+  position: absolute;
+  border: 3px solid rgba(0,0,0,1);
+  overflow: hidden;
+  background-color: #EDEDED;
+    border: 2px solid black;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    position: absolute;
+    width: 300px;
+    padding-right: 20px;
+    height: 300px;
+    padding-bottom: 20px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }
+  .grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    height: 350px;
+  }
