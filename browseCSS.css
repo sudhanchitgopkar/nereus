@@ -28,14 +28,15 @@ html {
     padding: 50px;
     margin: 20px;
     border-radius: 30px;
-    margin-left: 520px;
+    /* margin-left: 520px; */
     padding-left: 20px;
     padding-top: 20px;
-    position: absolute;
+    position: relative;
     width: 300px;
     padding-right: 20px;
     height: 300px;
     padding-bottom: 20px;
+    left: 38%;
 }
 
 .circle {
@@ -87,3 +88,13 @@ html {
     text-align: center;
     height: 350px;
   }
+
+  .N-logo { 
+	color:#FDAB30;
+	position:absolute;
+	left:41px;
+	top:25px;
+	font-family:Nunito;
+	text-align:left;
+	font-size:60px;
+}
