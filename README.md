@@ -42,3 +42,6 @@ CREATE TABLE questionsInfo (
     five bit NOT NULL,
 	PRIMARY KEY (accountID)
 );
+
+
+INSERT INTO profileInfo VALUES (1,'h','saba', 'merchant','3rd yr cs major', '20', 'student', 'female','serious','male', '@svm','@svm','@svm'), (2,'h','v', 'yang','3rd yr cs major', '20', 'student', 'female','male' ,'serious','@vy','@vy','@vy'), (3, 'h','elodie', 'collier','3rd yr cs major', '20', 'student', 'female','male','serious', '@ec','@ec','@ec');
