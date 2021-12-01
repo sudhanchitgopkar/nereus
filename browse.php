@@ -32,14 +32,19 @@
         </script>
         
         <div style="text-align:center;display: inline-block;">
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+            <div>
+                <div class="N-logo">N.</div>
+
+                <div class="dropdown" style="padding-top: 39px !important;">
+                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
                 </div>
             </div>
+            
 
 
             <!-- <div style="display: inline-block;padding-top: 40px !important;">
