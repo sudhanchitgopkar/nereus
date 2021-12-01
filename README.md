@@ -15,7 +15,8 @@ CREATE TABLE `accountInfo` ( `accountID` INT NOT NULL AUTO_INCREMENT , `username
 
 CREATE TABLE profileInfo (
 	accountID int NOT NULL AUTO_INCREMENT, 
-   	firstName varchar(10) NOT NULL UNIQUE,
+	picture varchar(50) NOT NULL,   	
+    firstName varchar(10) NOT NULL UNIQUE,
     lastName varchar(15) NOT NULL,
 	bio varchar(150) NOT NULL,
 	age int NOT NULL,
@@ -27,7 +28,7 @@ CREATE TABLE profileInfo (
 	twitter varchar(60) NOT NULL,
 	spotify varchar(60) NOT NULL,
 	PRIMARY KEY (accountID)
-);
+)
 
 CREATE TABLE accountInfo ( accountID INT NOT NULL AUTO_INCREMENT , username VARCHAR(15) NOT NULL , password VARCHAR(15) NOT NULL , email VARCHAR(320) NOT NULL , PRIMARY KEY (accountID));
 
