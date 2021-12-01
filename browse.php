@@ -77,7 +77,7 @@
 
                                                 <?php echo $row['bio'] . "<br>";?>
                                                 <br>
-                                                <?php echo $row['jobTitle'] . "<br>";?>
+                                                <b><?php echo $row['jobTitle'] . "<br>";?></b>
                                                 <?php echo $row['instagram'];?>
                                                 <?php echo $row['spotify'];?>
                                                 <?php echo $row['twitter'];?>
@@ -97,46 +97,6 @@
                     
                 </div>
             </div>
-            
-
-            
-
-                
-
-          
-            <h1>WORKING WITH VIDEO STUFF</h1>
-            
-                
-            <!-- <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php  echo $row['username'] . "<br>"; ?></h5>
-                        <p class="card-text">this would be bio</p>
-                    </div>
-                </div>
-            </div> -->
-            
-            
-            <h1>MY STUFF IGNORE FOR NOW</h1>
-            <section>
-                <table style=" border-collapse: collapse;">
-                    <?php foreach ($result as $row) : ?>
-                        <tr>
-                            <!-- <th style="background-color: #EDEDED;border: 2px solid black;padding: 50px;margin: 20px;border-radius: 30px;padding-left: 20px;padding-top: 20px;position: relative;width: 300px;padding-right: 20px;height: 250px;padding-bottom: 20px;">Name: ?></th> -->
-                        </tr>
-                    <?php endforeach; ?>
-                </table>
-            </section>
-            
-
-            <?php foreach ($query as $name) : 
-                echo 'after for each'; ?>
-                <li>
-                    <a class="linkColor" href="?category_id=<?php echo $name['username']; ?>">
-                        <?php echo $name['username']; ?>
-                    </a>
-                </li>
-            <?php endforeach; ?>
         </div>
         
     </body>
