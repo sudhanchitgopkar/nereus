@@ -10,9 +10,6 @@ Nereus is a dating application for UGA students built as final coursework for CS
 
 # SQL table GUI command
 
-CREATE TABLE `accountInfo` ( `accountID` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(15) NOT NULL , `password` VARCHAR(15) NOT NULL , `email` VARCHAR(320) NOT NULL , PRIMARY KEY (`accountID`));
-
-
 CREATE TABLE profileInfo (
 	accountID int NOT NULL AUTO_INCREMENT, 
 	picture varchar(50) NOT NULL,   	
