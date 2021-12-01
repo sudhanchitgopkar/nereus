@@ -1,105 +1,71 @@
-<?php
-
-include_once('session.php');
-
-
-// include('browse.php');
-?>
 
 <!DOCTYPE html>
-<html >
+<html>
     <head>
         <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link rel="stylesheet" href="browseCSS.css">
         <title>Browse</title>
     </head>
-    <body class="font">
-        <div style="display: inline-block;">
-            <h1 style="display: inline;" class="color">N.</h1>
-            <div class="topBar">
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-            </div>
-
-        </div> 
-        <h1 style="text-align: center;">Your #1 Match:</h1>
- 
-        <div class="frontBox" style="display: inline-block;">
-            <div style="display: inline-block;" class="circle">
-                <div style="padding-left: 150px; font-size: 25px; padding-top: 20px;">Sudhan Chitgopkar</div>
-            </div>
-            <div class="text">
-                <p>Hi! This is my bio. I might say some cheesy shit here, or tell a half-assed joke.</p>
-                <p><b>Professional Memer</b></p>
-                <p>Instagram • Twitter • Facebook</p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div>
-            <h2>Browse:</h2>
-            <!-- <div class="otherBox" style="display: inline-block;">
-                <div style="display: inline-block;" class="circle">
-                    <div style="padding-left: 150px; font-size: 25px; padding-top: 20px;">Sudhan Chitgopkar</div>
+    <body>
+        <div style="text-align:center;">
+            <span class="N-logo">N.</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div >
+                <h1 style="text-align: center;">Your #1 Match:</h1>
+                <div class="frontBox" style="display: inline-block;height: 250px;">
+                    <div style="display: inline-block;" class="circle">
+                        <div style="padding-left: 150px; font-size: 20px; padding-top: 20px;">Sudhan Chitgopkar</div>
+                    </div>
+                    <div style="font-size: 15px; text-align:center"> 
+                        <p>Hi! This is my bio. I might say some cheesy shit here, or tell a half-assed joke.</p>
+                        <p><b>Professional Memer</b></p>
+                        <p>Instagram • Twitter • Facebook</p>
+                    </div>
                 </div>
-                <div class="text">
-                    <p>Hi! This is my bio. I might say some cheesy shit here, or tell a half-assed joke.</p>
-                    <p><b>Professional Memer</b></p>
-                    <p>Instagram • Twitter • Facebook</p>
-                </div>
-            </div> -->
+            </div>
+            
 
-            <!-- FROM THE VIDEO -->
-            <div class="container py-5">
-                <div class="row mt-4">
-
-
-                    <?php
-                    //require database connection
-                    require ('db_connect.php');
-                    $query = "SELECT * FROM accountInfo";
-                    $query_run = mysqli_query($conn, $query);
-
-                    $check_user = mysqli_num_rows() > 0;
-
-                    if($check_user) {
-                        while($row = mysqli_fetch_assoc($query_run)) { //could be array
-                            ?>
-                            <div class="col-md-4 mt-3">
-                                <div class="card">
-                                    <img src=" <?php echo $row['image'] ?> " width="200px" height="200px" alt="Profile Pic">  <!-- type in path into src -->   
-                                    <div class="card-body">
-                                        <h2 class="card-title"> <?php echo $row['username']; ?> </h2> <!--username would be name first and last -->
-                                        <p class="card-text"> <?php echo $row['email']; ?>  </p> <!--bio would be name first and last -->
-                                    </div>
-                                </div>
-                            </div>
-                            <?php 
-
-                            echo $row['username'];
-                        }
-                    } else {
-                        echo "No users found";
-                    }
-                    ?>
-                    
+            <?php
+                require('connDB.php');
                 
+                $sql = "SELECT username FROM accountInfo";
+            
+                $result = $conn->query($sql);
+                foreach($result as $row) {
+                    echo $row['username'] . "<br>";
+                } 
+            ?>
+            <section>
+                <table style=" border-collapse: collapse;">
+                    <?php foreach ($result as $row) : ?>
+                        <tr>
+                            <th style="background-color: #EDEDED;border: 2px solid black;padding: 50px;margin: 20px;border-radius: 30px;padding-left: 20px;padding-top: 20px;position: relative;width: 300px;padding-right: 20px;height: 250px;padding-bottom: 20px;">Name: <?php echo $row['username']; ?></th>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </section>
+            
 
+            <?php foreach ($query as $name) : 
+                echo 'after for each'; ?>
+                <li>
+                    <a class="linkColor" href="?category_id=<?php echo $name['username']; ?>">
+                        <?php echo $name['username']; ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </div>
+        
+    </body>
+
+    
+    
+
+
+    
+
+</html>
