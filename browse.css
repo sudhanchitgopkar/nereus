@@ -1,94 +1,134 @@
 .color {
-    color: #FDAB30;
+  color: #FDAB30;
 }
 
 .hamburger {
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 4px 0;
-    border-radius: 30px;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  border-radius: 30px;
 }
 
 .topBar {
-    padding-left: 1050px;
-    display: inline-block; 
+  padding-left: 1050px;
+  display: inline-block; 
 }
 
 
 body {
-	background-image:linear-gradient(111.57deg, #EDEDED 0%, #FDAB30 150%);;
+background-image:linear-gradient(111.57deg, #EDEDED 0%, #FDAB30 150%);;
 }
 .font {
-    font-family: Nunito;
+  font-family: Nunito;
 }
-  
+
 .frontBox {
-    background-color: #EDEDED;
-    border: 2px solid black;
-    padding: 50px;
-    margin: 20px;
-    border-radius: 30px;
-    /* margin-left: 520px; */
-    padding-left: 20px;
-    padding-top: 20px;
-    position: relative;
-    width: 300px;
-    padding-right: 20px;
-    height: 280px;
-    padding-bottom: 20px;
+  background-color: #EDEDED;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 30px;
+  /* margin-left: 520px; */
+  padding-left: 20px;
+  padding-top: 20px;
+  position: relative;
+  width: 300px;
+  padding-right: 20px;
+  height: 280px;
+  padding-bottom: 20px;
 }
 
 .circle {
-    width: 80px;
-    height: 80px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 50px;
-    background: #FDAB30;
-    display: inline-block; 
-    /* margin-right: 170px !important; */
-  }
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 50px;
+  background: #FDAB30;
+  display: inline-block; 
+  /* margin-right: 170px !important; */
+}
 
 .otherBox {
-    background-color: #EDEDED;
-    border: 2px solid black;
-    padding: 50px;
-    margin: 20px;
-    border-radius: 30px;
-    /* margin-left: 520px; */
-    padding-left: 20px;
-    padding-top: 20px;
-    position: relative;
-    width: 250px;
-    padding-right: 20px;
-    height: 250px;
-    padding-bottom: 20px;
+  background-color: #EDEDED;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 30px;
+  /* margin-left: 520px; */
+  padding-left: 20px;
+  padding-top: 20px;
+  position: relative;
+  width: 250px;
+  padding-right: 20px;
+  height: 250px;
+  padding-bottom: 20px;
 }
 
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    /* background-color: #2196F3; */
-    padding: 10px;
-  }
-  .grid-item {
-    /* background-color: rgba(255, 255, 255, 0.8); */
-    /* border: 1px solid rgba(0, 0, 0, 0.8); */
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    height: 350px;
-  }
-
-  .N-logo { 
-	color:#FDAB30;
-	position:absolute;
-	left:41px;
-	top:25px;
-	font-family:Nunito;
-	text-align:left;
-	font-size:60px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  height: 350px;
 }
 
+.N-logo { 
+color:#FDAB30;
+position:absolute;
+left:41px;
+top:25px;
+font-family:Nunito;
+text-align:left;
+font-size:60px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #EDEDED;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
