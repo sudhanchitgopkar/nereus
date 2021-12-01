@@ -106,7 +106,7 @@ body {
   }
   
   .dropdown {
-    float: right;
+    /* float: right; */
     position: relative;
     display: inline-block;
   }
