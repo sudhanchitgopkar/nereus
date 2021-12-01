@@ -1,16 +1,8 @@
 * {
     margin: 0; padding: 0;
-    font-family: sans-serif;
-    font-weight: lighter;
+    font-family: Nunito;
+    /* font-weight: lighter; */
 }
-.menubar {
-    position: relative;
-    height: 12vh;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 1%;
-}
-
 .valign {
     position: absolute;
     top: 50%;
@@ -115,17 +107,22 @@ h2 {
 }
 
 button {
-    padding: 1vw 2vw;
-    font-size: 1.2vw;
+    padding: 10px 20px;
+    font-size: 20px;
     margin-right: 2vw;
-    border-radius: 45px;
+    border-radius: 15px;
     color: #EDEDED;
     border-style: none;
     background-color: #1A1A1A;
+    font-family: Nunito;
 }
 
 .baccent {
     background-color: #FDAB30;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: Nunito;
+    border-radius: 15px;
 }
 
 #addpadding {
@@ -189,4 +186,18 @@ img {
 
 #loginimg {
     width: 500px;
+}
+
+.N-logo { 
+	color:#FDAB30;
+	position:absolute;
+	left:41px;
+	top:25px;
+	font-family:Nunito;
+	text-align:left;
+	font-size:60px;
+}
+
+p {
+    font-family: Roboto;
 }
