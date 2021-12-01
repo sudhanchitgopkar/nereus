@@ -2,7 +2,7 @@ h1{
 
     font-family: 'Nunito';
     color: #1a1a1a;
-      font-size: 3.5em;
+      font-size: 5.5em;
       font-weight: lighter;
       margin-bottom: 0px;
     
@@ -13,7 +13,7 @@ h1{
     background-color: linear-gradient(325.44deg, #FDAB30 -73.43%, rgba(253, 171, 48, 0) 99.46%);
     /* color: #1a1a1a; */
           font-family: 'Roboto'; 
-          padding-left: 20px;
+          padding-left: 90px;
 
 
   }
@@ -23,7 +23,8 @@ h1{
   input[type=text], select, textarea {
     display: inline-block;
     vertical-align: top;
-      border-color: #ededed;
+      border-color: #1a1a1a;
+      background-color: transparent;
       border-style: solid;
       border-radius: 25px;
       border-width: 1px;
@@ -42,6 +43,9 @@ h1{
       line-height: 1.2em;
       
   } */
+  p {
+      font-size: 2em;
+  }
 
   label {
     padding: 12px 12px 12px 0;
@@ -57,10 +61,12 @@ h1{
     height: auto;
   }
 
-  .row1 {
+  /* .row1 {
     padding-left: 30px;
+    border-color: #1a1a1a;
+    
           
-  }
+  } */
 
   .row {
   align-items: center;
@@ -80,9 +86,11 @@ h1{
     background-color: #fdab30;
   }
 
-  .container {
+  .container1 {
           display: flex;
           align-items: center;
+          padding-left: 30px;
+          border-color: #1a1a1a;
         }
 
   input {
@@ -102,6 +110,6 @@ h1{
     /* width:100px; */
     border-radius: 50%;
     float:left;
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
 }
