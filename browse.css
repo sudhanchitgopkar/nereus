@@ -15,8 +15,9 @@
     display: inline-block; 
 }
 
-html {
-    background: linear-gradient(325.44deg, #FDAB30 -73.43%, rgba(253, 171, 48, 0) 99.46%) fixed;
+
+body {
+	background-image:linear-gradient(111.57deg, #EDEDED 0%, #FDAB30 150%);;
 }
 .font {
     font-family: Nunito;
@@ -34,19 +35,19 @@ html {
     position: relative;
     width: 300px;
     padding-right: 20px;
-    height: 250px;
+    height: 280px;
     padding-bottom: 20px;
 }
 
 .circle {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 50px;
     background: #FDAB30;
     display: inline-block; 
-    margin-right: 170px !important;
+    /* margin-right: 170px !important; */
   }
 
 .otherBox {
@@ -59,7 +60,7 @@ html {
     padding-left: 20px;
     padding-top: 20px;
     position: relative;
-    width: 300px;
+    width: 250px;
     padding-right: 20px;
     height: 250px;
     padding-bottom: 20px;
