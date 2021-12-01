@@ -1,5 +1,7 @@
 <!DOCTYPE html>
     <head>
+        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <title>Nereus</title>
         <link rel="stylesheet" href="test.css">
         <meta charset="UTF-8">
@@ -7,16 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <header class = "menubar">
-        <div class = "valign" id = "lmenu">       
-             <p id="logo">N.</p>
-        </div>
-        <div class = "valign" id = "menuitems">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#log in">Log In</a></li>
-                <li><a href="#register">Register</a></li>
-              </ul>
-        </div>
+        <a href="index.html"><span class="N-logo">N.</span></header></a>
     </header>
 
     <body>
@@ -33,8 +26,12 @@
             <div id = "addpadding">
                 <p>We’re the dating app by students, for students. Nereus helps students find connections wherever they go - regardless of which campus they’re on, or who they're looking for.</p>
             </div>
-                <button class="baccent">Sign In</button>
-                <button>Learn More</button>
+                <button class="baccent" onclick="window.location.href='login.html';">
+                    Sign In
+                  </button>
+                <button onclick="window.location.href='register.html';">
+                    Register Now
+                  </button>
         </div>
     </body>
 
