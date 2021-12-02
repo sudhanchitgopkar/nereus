@@ -35,7 +35,7 @@
             <div>
                 <div class="N-logo">N.</div>
 
-                <div class="dropdown" style="padding-top: 38px !important;margin-right: 30px;">
+                <div class="dropdown" style="padding-top: 38px !important; margin-right: 30px;">
                     <button onclick="myFunction()" class="dropbtn">
                         <!-- Dropdown -->
                         <div class="hamburger"></div>
@@ -72,8 +72,8 @@
             <br>
             <div >
                 <h1 style="text-align: center;">Your #1 Match:</h1>
-                <div class="frontBox" style="display: inline-block;">
-                    <div style="display: inline-block;margin-right: 160px !important;" class="circle">
+                <div class="frontBox" style="display: inline-block;width: 450px;height: 350px;">
+                    <div style="display: inline-block;margin-right: 250px !important;" class="circle">
                         <div style="padding-left: 150px; font-size: 20px; padding-top: 20px;">Sudhan Chitgopkar</div>
                     </div>
                     <div style="font-size: 13px; text-align:center"> 

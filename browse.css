@@ -37,14 +37,15 @@ background-image:linear-gradient(111.57deg, #EDEDED 0%, #FDAB30 150%);;
   padding-right: 20px;
   height: 300px;
   padding-bottom: 20px;
+
 }
 
 .circle {
-  width: 80px;
-  height: 80px;
+  width: 125px;
+  height: 125px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  border-radius: 50px;
+  border-radius: 75px;
   background: #FDAB30;
   display: inline-block; 
   /* margin-right: 170px !important; */
