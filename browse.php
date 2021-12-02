@@ -74,7 +74,7 @@
                 <h1 style="text-align: center;">Your #1 Match:</h1>
                 <div class="frontBox" style="display: inline-block;width: 450px;height: 350px;">
                     <div style="display: inline-block;margin-right: 250px !important;" class="circle">
-                        <div style="padding-left: 150px; font-size: 20px; padding-top: 20px;">Sudhan Chitgopkar</div>
+                        <div style="adding-left: 190px;font-size: 30px;padding-top: 20px;">Sudhan Chitgopkar</div>
                     </div>
                     <div style="font-size: 13px; text-align:center"> 
                         <br>
