@@ -118,7 +118,7 @@ input[type=text], select, textarea {
   }
 
 
-button[type=submit]:active {
+button[type=submit]:focus {
     background-color: #fdab30;
     opacity: 0.5;
   }

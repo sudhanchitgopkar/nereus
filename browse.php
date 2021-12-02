@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e3a7d60815b36891b3e262c9f6ab6a832678a494
 <!DOCTYPE html>
 <html>
     <head>
@@ -77,15 +80,15 @@
                 <h1 style="text-align: center;">Your #1 Match:</h1>
                 <div class="frontBox" style="display: inline-block;width: 450px;height: 350px;">
                     <div style="display: inline-block;margin-right: 250px !important;" class="circle">
-                        <div style="adding-left: 190px;font-size: 30px;padding-top: 20px;">Sudhan Chitgopkar</div>
+                        <div style="padding-left: 190px;font-size: 30px;padding-top: 20px;">Sudhan Chitgopkar</div>
                     </div>
-                    <div style="font-size: 13px; text-align:center"> 
+                    <div style="font-size: 17px; text-align:center"> 
                         <br>
                         <p>Hi! This is my bio. I might say some cheesy shit here, or tell a half-assed joke.</p>
                         <br>
                         <div>
                             <p><b>Professional Memer</b></p>
-                            <p>Instagram • Twitter • Facebook</p>
+                            <p>Instagram • Twitter • Facebook</p>
                         </div>
                         
                     </div>
@@ -98,7 +101,7 @@
                 <h2 style="padding-right: 1200px !important;">Browse: </h2>
             </div>
             
-            <div class="container py-5" style="padding-top: 0px !important;margin-left: 200px !important;">
+            <div class="container py-5" style="padding-top: 0px !important;margin-left: 120px !important;">
                 <div class="row mt-4" style="margin-left: 50px;">
 
 
@@ -123,14 +126,14 @@
                             while($row = mysqli_fetch_array($query_run)){
 
                                 ?>
-                                <div class="col-md-3" style="margin-right: 30px;">
+                                <div class="col-md-3" style="margin-right: 80px;">
                                     <div class="otherBox" >
                                         <div class="card-body" style="padding: 0px !important;display: inline-block;">
                                             <div style="display: inline-block;">
-                                                <img src="" class="circle" alt="User Images" style="display: inline-block;">
-                                                <div style="font-size: 20px; display: inline-block;height: 90px !important;width: 110px !important;"><?php echo $row['firstName'] . " <br>"; echo $row['lastName'];?></div>
+                                                <img src="" class="profileCircle" alt="User Images" style="display: inline-block;">
+                                                <div style="font-size: 25px; display: inline-block;height: 90px !important;width: 110px !important;"><?php echo $row['firstName'] . " <br>"; echo $row['lastName'];?></div>
                                             </div>
-                                            <p class="card-text">
+                                            <p class="card-text" style="font-size: 17px;">
                                                 <br>
 
                                                 <?php echo $row['bio'] . "<br>";?>
@@ -161,6 +164,7 @@
 
     </body>
 
+<<<<<<< HEAD
     
     
 
@@ -223,3 +227,6 @@
 >>>>>>> 2e7fd3cedd96450dc2802418aaf540139fa9e606
 
     </html>
+=======
+    
+>>>>>>> e3a7d60815b36891b3e262c9f6ab6a832678a494
