@@ -31,7 +31,7 @@
             }
         </script>
         
-        <div style="text-align:center;display: inline-block;width: 1225px !important;">
+        <div style="text-align:center;display: inline-block; width: 1225px !important;">
             <div>
                 <div class="N-logo">N.</div>
 
@@ -95,7 +95,7 @@
                 <h2 style="padding-right: 950px !important;">Browse: </h2>
             </div>
             
-            <div class="container py-5" style="padding-top: 0px !important;">
+            <div class="container py-5" style="padding-top: 0px !important;margin-left: 30px !important;">
                 <div class="row mt-4">
 
 
