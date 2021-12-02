@@ -52,8 +52,8 @@ background-image:linear-gradient(111.57deg, #EDEDED 0%, #FDAB30 150%);;
 }
 
 .profileCircle {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 50px;

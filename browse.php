@@ -123,10 +123,10 @@
                                     <div class="otherBox" >
                                         <div class="card-body" style="padding: 0px !important;display: inline-block;">
                                             <div style="display: inline-block;">
-                                                <img src="" class="circle" alt="User Images" style="display: inline-block;">
-                                                <div style="font-size: 20px; display: inline-block;height: 90px !important;width: 110px !important;"><?php echo $row['firstName'] . " <br>"; echo $row['lastName'];?></div>
+                                                <img src="" class="profileCircle" alt="User Images" style="display: inline-block;">
+                                                <div style="font-size: 25px; display: inline-block;height: 90px !important;width: 110px !important;"><?php echo $row['firstName'] . " <br>"; echo $row['lastName'];?></div>
                                             </div>
-                                            <p class="card-text">
+                                            <p class="card-text" style="font-size: 17px;">
                                                 <br>
 
                                                 <?php echo $row['bio'] . "<br>";?>
