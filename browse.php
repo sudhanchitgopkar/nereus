@@ -31,11 +31,11 @@
             }
         </script>
         
-        <div style="text-align:center;display: inline-block; width: 1225px !important;">
+        <div style="text-align:center;">
             <div>
                 <div class="N-logo">N.</div>
 
-                <div class="dropdown" style="padding-top: 38px !important;">
+                <div class="dropdown" style="padding-top: 38px !important;margin-right: 30px;">
                     <button onclick="myFunction()" class="dropbtn">
                         <!-- Dropdown -->
                         <div class="hamburger"></div>
@@ -92,11 +92,11 @@
             <div>
                 <br>
                 <br>
-                <h2 style="padding-right: 950px !important;">Browse: </h2>
+                <h2 style="padding-right: 1200px !important;">Browse: </h2>
             </div>
             
             <div class="container py-5" style="padding-top: 0px !important;margin-left: 30px !important;">
-                <div class="row mt-4">
+                <div class="row mt-4" style="margin-left: 50px;">
 
 
                     <?php
@@ -120,7 +120,7 @@
                             while($row = mysqli_fetch_array($query_run)){
 
                                 ?>
-                                <div class="col-md-3">
+                                <div class="col-md-3" style="margin-right: 30px;">
                                     <div class="otherBox" >
                                         <div class="card-body" style="padding: 0px !important;display: inline-block;">
                                             <div style="display: inline-block;">
