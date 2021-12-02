@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
     <head>
@@ -75,15 +73,15 @@
                 <h1 style="text-align: center;">Your #1 Match:</h1>
                 <div class="frontBox" style="display: inline-block;width: 450px;height: 350px;">
                     <div style="display: inline-block;margin-right: 250px !important;" class="circle">
-                        <div style="adding-left: 190px;font-size: 30px;padding-top: 20px;">Sudhan Chitgopkar</div>
+                        <div style="padding-left: 190px;font-size: 30px;padding-top: 20px;">Sudhan Chitgopkar</div>
                     </div>
-                    <div style="font-size: 13px; text-align:center"> 
+                    <div style="font-size: 17px; text-align:center"> 
                         <br>
                         <p>Hi! This is my bio. I might say some cheesy shit here, or tell a half-assed joke.</p>
                         <br>
                         <div>
                             <p><b>Professional Memer</b></p>
-                            <p>Instagram • Twitter • Facebook</p>
+                            <p>Instagram • Twitter • Facebook</p>
                         </div>
                         
                     </div>
@@ -96,7 +94,7 @@
                 <h2 style="padding-right: 1200px !important;">Browse: </h2>
             </div>
             
-            <div class="container py-5" style="padding-top: 0px !important;margin-left: 200px !important;">
+            <div class="container py-5" style="padding-top: 0px !important;margin-left: 120px !important;">
                 <div class="row mt-4" style="margin-left: 50px;">
 
 
@@ -121,7 +119,7 @@
                             while($row = mysqli_fetch_array($query_run)){
 
                                 ?>
-                                <div class="col-md-3" style="margin-right: 30px;">
+                                <div class="col-md-3" style="margin-right: 80px;">
                                     <div class="otherBox" >
                                         <div class="card-body" style="padding: 0px !important;display: inline-block;">
                                             <div style="display: inline-block;">
@@ -160,60 +158,3 @@
     </body>
 
     
-    
-
-
-    
-=======
-    <!DOCTYPE html>
-    <html>
-        <h1>pls work</h1>
-        <?php
-            require('connDB.php');
-            
-            $sql = "SELECT username FROM accountInfo";
-            // $db = $conn;
-            // $result = mysqli_query($db, $sql);
-            $result = $conn->query($sql);
-        // $rows = $result -> fetchAll();
-        
-            // $result = mysqli_query($conn, $sql);
-            // echo sizeof($result);
-            // echo [$result] . "<br>";
-            // var_dump($result);
-            foreach($result as $row) {
-                echo $row['username'] . "<br>";
-            }
-            $check_user = $result->num_rows > 0;
-            if($result->num_rows == 0) {
-                echo "no results";
-            }
-            else {
-                echo "results";
-            }
-            // $result = $conn->query($sql);
-            // echo $result;
-
-            
-            if($check_user) {
-                echo 'inside if';
-            } else {
-                echo 'inside else';
-            }
-            echo 'after;';
-        ?>
-        
-
-
-        <h1>pls work before foreach</h1>
-        <?php foreach ($query as $name) : 
-            echo 'after for each'; ?>
-            <li>
-                <a class="linkColor" href="?category_id=<?php echo $name['username']; ?>">
-                    <?php echo $name['username']; ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
->>>>>>> VenSaba
-
-    </html>
