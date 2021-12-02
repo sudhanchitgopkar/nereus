@@ -2,13 +2,14 @@ h1{
 
     font-family: 'Nunito';
     color: #1a1a1a;
-    font-size: 5.5em;
+    /* font-size: 5.5em; */
     font-weight: lighter;
     margin-bottom: 0px;
     position:absolute;
 	left:2%;
 	top:100px;
-    
+    font-size:100px;
+
 }
 
 .N-logo { 
@@ -26,14 +27,19 @@ body {
     font-family: 'Roboto'; 
     padding-left: 70px;
     padding-top: 400px;
+    font-size: 2em;
 }
 
 
-}
+
 .gradient{
  background: linear-gradient(325.44deg, #FDAB30 -73.43%, rgba(253, 171, 48, 0) 99.46%);
 }
-  
+input {
+    font-size: 1em;
+    color: #1a1a1a;
+    font-family: 'Roboto'; 
+  } 
 input[type=text], select, textarea {
     display: inline-block;
     vertical-align: top;
@@ -49,8 +55,16 @@ input[type=text], select, textarea {
       margin-bottom: 10px;
   }
 
+  input[type=checkbox] {
+    background-color: transparent;
+    height: 50px; 
+    width : 50px;
+    display: inline-block;
+    border-radius: 25px;
+
+  }
+
   p {
-      font-size: 2em;
       position:absolute;
 	  left:2%;
 	  top:270px;
@@ -59,52 +73,122 @@ input[type=text], select, textarea {
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
+    padding-top: 60px;
   }
 
-  img {
-  
-    border: 7px solid #fdab30;
-    border-radius: 50%;
-    float:left;
+   img {
     width: 600px;
     height: auto;
-  }
+  } 
 
-  .row {
-  align-items: center;
-        }
-
-  input[type=submit] {
-    background-color: #fdab30;
-    color: transparent;
+  button[type=submit] {
+    align-items: center;
+    background-color: transparent;
+    color: #1a1a1a;
     padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+    border-color: #1a1a1a;
+    border-radius: 25px;
     cursor: pointer;
-    float: right;
-  }
-
-  input[type=submit]:hover {
-    background-color: #fdab30;
-  }
-
-  .container1 {
-          display: flex;
-          align-items: center;
-          padding-left: 30px;
-          border-color: #1a1a1a;
-        }
-
-  input {
+    font-size: 1em;
+    font-family: 'Roboto'; 
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
     
-    color: transparent;
   }
+
+.q1{
+    padding-left: 350px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.q2{
+    padding-left: 350px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.q3{
+    padding-left: 350px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+  .button2{
+      float:right;
+  }
+
+
+button[type=submit]:active {
+    background-color: #fdab30;
+    opacity: 0.5;
+  }
+
+.container1 {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    border-color: #1a1a1a;
+}
+
+ .container2 {
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    border-color: #1a1a1a;
+}
+
+.container3 {
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    border-color: #1a1a1a;
+}
+
+.container4 {
+    /* display: flex; */
+    align-items: center;
+    padding-left: 0px;
+    padding-bottom: 50px;
+    border-color: #1a1a1a;
+}
+
+.container5 {
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    border-color: #1a1a1a;
+}
+                
+.leftcheckbox{
+  padding-left: 100px;  
+  padding-top: 50px;
+  padding-right: 170px;
+  padding-bottom: 50px;
+
+}
+.middlecheckbox{
+  padding-top: 50px;
+  padding-right: 210px;
+  padding-bottom: 50px;
+  padding-left: 250px;
+}
+
+.rightcheckbox{
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 160px; 
+  }
+
+
+
+
   html {
     background: linear-gradient(325.44deg, #FDAB30 -73.43%, rgba(253, 171, 48, 0) 99.46%) fixed;
 }
 .circle {
     background-color: transparent;
-    border:3px solid #FDAB30;    
+    border:10px solid #FDAB30;    
     /* height:100px; */
     /* border-radius:50%; */
     -moz-border-radius:100%;
@@ -116,4 +200,12 @@ input[type=text], select, textarea {
     height: 600px;
     left:2%;
 	top:600px;
+}
+.right {
+    width: 30x;
+	height:15px;
+    position:absolute;
+    right: 5%;
+    top: 48%;
+    
 }
