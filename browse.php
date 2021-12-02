@@ -72,7 +72,7 @@
             <br>
             <div >
                 <h1 style="text-align: center;">Your #1 Match:</h1>
-                <div class="frontBox" style="display: inline-block;padding: 20px 0px 0px !important;">
+                <div class="frontBox" style="display: inline-block;">
                     <div style="display: inline-block;margin-right: 160px !important;" class="circle">
                         <div style="padding-left: 150px; font-size: 20px; padding-top: 20px;">Sudhan Chitgopkar</div>
                     </div>
@@ -95,7 +95,7 @@
                 <h2 style="padding-right: 1200px !important;">Browse: </h2>
             </div>
             
-            <div class="container py-5" style="padding-top: 0px !important;margin-left: 30px !important;">
+            <div class="container py-5" style="padding-top: 0px !important;margin-left: 200px !important;">
                 <div class="row mt-4" style="margin-left: 50px;">
 
 
