@@ -31,7 +31,7 @@
             }
         </script>
         
-        <div style="text-align:center;display: inline-block;">
+        <div style="text-align:center;display: inline-block;width: 1225px !important;">
             <div>
                 <div class="N-logo">N.</div>
 
