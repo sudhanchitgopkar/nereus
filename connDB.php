@@ -13,7 +13,7 @@
         // Create connection
         try {
             $conn = new mysqli($servername, $username, $password, $dbname);
-             echo 'Connected successfully<br>';
+            //  echo 'Connected successfully<br>';
           }
           catch (PDOException $e)
           {
