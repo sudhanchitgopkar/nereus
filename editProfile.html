@@ -1,134 +1,171 @@
 <!DOCTYPE html>
-<html >
-<head>
-<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-<link rel="stylesheet" href="mycss.css">
-</head>
-<style>  
-</style>
-<body>
-    
-<span  class="N-logo">N.</span>
-
-<br>
-<div class="header">
-    <h1>Edit Profile</h1>
-    <p>Tell us a bit about yourself!</p>
-    
-</div>
-<div class="right">
-    <img src="create_profile.svg" alt="alt text"/>
-  </div>
-<div class="circle"></div>
-
-<div class="container1">
-<form action="/action_page.php">
-        <label for="fname">Full Name:</label>
+<html lang="en">
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="mycss.css">
+        <meta charset="UTF-8">
+        <title>Add Record Form</title>
+    </head>
+    <body>
+        <div>
+            <span  class="N-logo">N.</span>
         <br>
-        <input type="text" id="fname" name="fullname" style="height: 80px; margin: 0px 0px 10px 0px; width: 350px;" >
-        <br>
-<label for="biography">Biography:</label>
-<br>
-<input type="text" id="bio" name="bio" style="height: 407px; margin: 0px 0px 10px 0px; width: 905px;" >
+        <div class="header">
+            <h1>Edit Your Profile</h1>
+            <p>Tell us a bit about yourself!</p>
+            
+        </div>
+        <div class="right">
+            <!-- <img src="create_profile.svg" alt="alt text"/> -->
+        </div>
+        <div class="circle"></div>
 
-</div>
+        <h1>TESTING Form</h1>
+        <form action="editProfile.php" method="post" >
+            <div style="margin-left: 550px;">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName">
+                    <br>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName">
+                    <br>
+                    <label for="bio">bio:</label>
+                    <input type="text" name="bio" id="bio">
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="display: inline-block;">
+                <div style="display: inline-block;">
+                    <label for="age">Age:</label>
+                    <input type="text" name="age" id="age">
+                </div>
+                <div style="display: inline-block;">
+                    <label for="jobTitle">jobTitle:</label>
+                    <input type="text" name="jobTitle" id="jobTitle">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="display: inline-block;">
+                <div style="display: inline-block;">
+                    <label for="sex">I identify as:</label>
+                    <br>
+                    <span><input type="radio" name="sex" value="Male"/>Male</span>
+                    <span><input type="radio" name="sex" value="Female"/>Female</span>
+                    <span><input type="radio" name="sex" value="Non-Binary"/>Non-Binary</span>
+                    <span><input type="radio" name="sex" value="Other"/>Other</span>
 
-<div class="container2">    
-    <label for="age">Age:</label>  
-    <input type="text" id="age" name="age" style="height: 80px; margin: 60px 74px 10px 15px; width: 450px;">
-    <label for="job">Job Title:</label>
-    <input type="text" id="job" name="job"style="height: 80px; margin: 60px 74px 10px 15px; width: 850px;">
-</div>
-    <!-- <div class="row">
-        <label for="socialmedia">Social Media</label>
-        <textarea id="socialmedia" name="socialmedia" style="width:460px"></textarea>
+                   
+                </div>
+                <div style="display: inline-block;">
+                    <label for="sex">Looking for:</label>
 
-        </div> -->
+                    <br>
+                    <span><input type="radio" name="lookingForSex" value="Male"/>Male</span>
+                    <span><input type="radio" name="lookingForSex" value="Female"/>Female</span>
+                    <span><input type="radio" name="lookingForSex" value="Non-Binary"/>Non-Binary</span>
+                    <span><input type="radio" name="lookingForSex" value="Other"/>Other</span>
+    
+                </div>
+                <div style="display: inline-block;">
+                    <label for="sex">Relationship Type:</label>
 
-    <div class="container3">
+                    <br>
+                    <span><input type="radio" name="relationType" value="Friends"/>Friends</span>
+                    <span><input type="radio" name="relationType" value="Serious"/>Serious</span>
+                    <span><input type="radio" name="relationType" value="Hookups"/>Hookups</span>
+                    <span><input type="radio" name="relationType" value="IDK"/>IDK</span>
+             
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="display: inline-block;">
+                <div style="display: inline-block;">
+                    <label for="instagram">instagram:</label>
+                    <input type="text" name="instagram" id="instagram">
+                </div>
+                <div style="display: inline-block;">
+                    <label for="twitter">twitter:</label>
+                    <input type="text" name="twitter" id="twitter">
+                </div>
+                <div style="display: inline-block;">
+                    <label for="spotify"> spotify:</label>
+                    <input type="text" name="spotify" id="spotify">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <h3>WOULD YOU RATHER.....</h3>
+                <label for="wouldYouRather">Would You Rather:</label>
 
-    <div class="leftcheckbox" style="float:left">
-    <label for="identity">I identify as:</label>
-    <br>
-    <input type="checkbox" id="gender1" name="gender1" value="Male">
-    <label for="gender1"> Male</label><br>
-    <input type="checkbox" id="gender2" name="gender2" value="Female">
-    <label for="gender2"> Female</label><br>
-    <input type="checkbox" id="gender3" name="gender3" value="Non-Binary">
-    <label for="gender3"> Non-Binary</label><br>
-    <input type="checkbox" id="gender4" name="gender4" value="Other">
-    <label for="gender4"> Other</label><br>
-    </div>
-   
-    <div class="middlecheckbox" style="float:center">
-    <label for="Looking for">Looking for:</label>
-    <br>
-    <input type="checkbox" id="gender1" name="gender1" value="Male">
-    <label for="gender1"> Male</label><br>
-    <input type="checkbox" id="gender2" name="gender2" value="Female">
-    <label for="gender2"> Female</label><br>
-    <input type="checkbox" id="gender3" name="gender3" value="Non-Binary">
-    <label for="gender3"> Everyone</label><br>
-    <input type="checkbox" id="gender4" name="gender4" value="Other">
-    <label for="gender4"> Other</label><br>
-    </div>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather1" value="1"/>Be Eaten By A Lion</span>
+                    <span><input type="radio" name="wouldYouRather1" value="2"/>Be Eaten By Ants</span>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather2" value="1"/>Know how the world ends</span>
+                    <span><input type="radio" name="wouldYouRather2" value="2"/>Know when the world ends</span>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather3" value="1"/>Be Gandolf</span>
+                    <span><input type="radio" name="wouldYouRather3" value="2"/>Be Dumbledore</span>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather4" value="1"/>Wear comfortable clothes</span>
+                    <span><input type="radio" name="wouldYouRather4" value="2"/>Wear stylish clothes</span>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather5" value="1"/>Be famous</span>
+                    <span><input type="radio" name="wouldYouRather5" value="2"/>Be rich</span>
+                   
+            </div>
+           
+            <input type="submit" value="Submit">
 
-    <div class="rightcheckbox" style="float:right">
-    <label for="distance">Relationship Type:</label>
-    <br>
-    <input type="checkbox" id="distance1" name="distance1" value="10 Miles">
-    <label for="distance1"> Friends</label><br>
-    <input type="checkbox" id="distance2" name="distance2" value="50 Miles">
-    <label for="distance2"> Serious</label><br>
-    <input type="checkbox" id="distance3" name="distance3" value="100 Miles">
-    <label for="distance3"> Hookups</label><br>   
-    <input type="checkbox" id="gender4" name="gender4" value="Other">
-    <label for="gender4"> Other</label><br>      
-    </div>
+        </form>
 
-</div>
+        <!-- <form action="insertQ.php" method="post">
+            <div>
+                <h3>WOULD YOU RATHER.....</h3>
+                <label for="wouldYouRather">Would You Rather:</label>
 
-<div class="container4">
-<label for="questions">Would you rather...</label>
-<br>
-<div class="q1">
-    <button type="submit" form="form1" value="be eaten by a lion" style="width: 600px; margin: 50px 100px 50px 100px; width: 350px;">be eaten by a lion </button>
-    <button type="submit" form="form1" value="be eaten by ants" style="width: 300px; margin: 50px 100px 50px 100px; width: 350px;">be eaten by ants</button>    
-</div>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather1" value="1"/>Be Eaten By A Lion</span>
+                    <span><input type="radio" name="wouldYouRather1" value="2"/>Be Eaten By Ants</span>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather2" value="1"/>Know how the world ends</span>
+                    <span><input type="radio" name="wouldYouRather2" value="2"/>Know when the world ends</span>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather3" value="1"/>Be Gandolf</span>
+                    <span><input type="radio" name="wouldYouRather3" value="2"/>Be Dumbledore</span>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather4" value="1"/>Wear comfortable clothes</span>
+                    <span><input type="radio" name="wouldYouRather4" value="2"/>Wear stylish clothes</span>
+                    <br>
+                    <span><input type="radio" name="wouldYouRather5" value="1"/>Be famous</span>
+                    <span><input type="radio" name="wouldYouRather5" value="2"/>Be rich</span>
+                   
+            </div>
+            <input type="submit" value="Submit">
 
-<div class="q2">
-    <button type="submit" form="form1" value="know when the world ends" style="margin: 50px 100px 50px 100px; width: 350px;">know when the world end</button>
-    <button type="submit" form="form1" value="know how the world ends" style="margin: 50px 100px 50px 100px; width: 350px;">know how the world ends</button>
-</div>
+        </form> -->
 
-<div class="q3">
-<button type="submit" form="form1" value="poop yourself" style="margin: 50px 100px 50px 100px; width: 350px;">poop yourself</button>
-<button type="submit" form="form1" value="pee yourself" style="margin: 50px 100px 50px 100px; width: 350px;">pee yourself</button>
-</div>
-</div>
+        </div>
+        
 
-<div class="container5">    
-    <label for="insta">Instagram</label>  
-    <br>
-    <input type="text" id="insta" name="insta" style="height: 80px; margin: 60px 74px 10px 15px; width: 350px;">
-    <label for="spotify">Spotify</label>
-    <input type="text" id="spotify" name="spotify"style="height: 80px; margin: 60px 74px 10px 15px; width: 350px;">
-    <label for="facebook">Facebook</label>
-    <input type="text" id="facebook" name="facebook"style="height: 80px; margin: 60px 74px 10px 15px; width: 350px;">
-</div>
-
-<div class="button2">
-    <!-- <label for="submit">Submit</label> -->
-    <!-- <input type="submit" value="Submit"> -->
-    <button type="submit" formaction="form1" value="Submit">Submit</button>
-
-    </div>
-</form>
-</div>
-
-
-
-
-</body>
+    </body>
 </html>
+
+
+
