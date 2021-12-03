@@ -1,84 +1,63 @@
 <?php
+    require('connDB.php');
 
-  
-    //==================== CONNECTING TO DB ====================//
-        $servername = "localhost"; 
-        $username = "root"; //default username
-        $password = "";     //default pass
-	    $dbname = "nereus";
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
-        // Create connection
-        try {
-            $mysqli = new mysqli($servername, $username, $password, $dbname);
-            //  echo 'Connected successfully<br>';
-          }
-          catch (PDOException $e)
-          {
-            $error=$e->getMessage();
-            echo '<p> Unable to connect to database: ' .$error;
-            exit();
-          }
+        if (empty($username) || empty($password)) {
+            echo("Please fill out all fields.");
+            return;
+        } 
 
-    ?> 
+        $sql = "SELECT * FROM accountInfo WHERE username='$username' AND password = '$password' LIMIT 1";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_assoc($result);
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta title="Nereus" />
-    <link rel="stylesheet" href="logstyle.css" />
-  </head>
+        if (!$user) {
+            echo("This username or password is incorrect.");
+        } else {
+            $_SESSION['username'] = $username;
+            $_SESSION['success'] = "You are now logged in";
+            header('location: createprofilenew.html');
+        }
 
-  <body>
-    <h1>Welcome to <span style="color: #bee09c">Nereus</span></h1>
-    <h2 id="subtitle">
-      We’re so excited you’re joining us! Let’s get you started with an account. <br>
-      If you already have an account, you can log in now.
-    </h2>
 
-    <div class="twocol">
-      <h2>Log In</h2>
-      <form action="cookies.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" />
-        <br />
-        <label for="password">Password:</label>
-        <input type="password" name="password" />
-        <input id="accentbtn" type="submit" value="Login" /> 
-        <input type="submit" value="Forgot Password?"><br>
-        <!-- <button id="accentbtn" type="submit">Log In</button> -->
-        <!-- <button>Forgot Password?</button> -->
-        <!-- <input id="accentbtn" type="submit" value="Login" id="submit" />
-        <button>Forgot Password?</button> -->
-      </form>
+     }
 
-      
+?>
 
-    </div>
+<DOCTYPE! html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="logstyle.css" />
+      <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    </head>
+    <body>
 
-    
-      <h2>Register</h2>
-      <form id="right" action="LogIn.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" />
-        <br />
-        <label for="email">Email:</label>
-        <input type="email" name="email" />
-        <br />
-        <label for="password">Password:</label>
-        <input type="password" name="password" />
-        <br>
-        <button id="accentbtn">Log In</button>
-        <button>Learn More About Us</button>
-        <!-- <input type="submit" value="Login" id="submit" /> -->
-      </form>
+        <span  class="N-logo">N.</span>
 
-      <!-- <button id="accentbtn">Log In</button>
-      <button>Learn More About Us</button> -->
+        <div class="box">
+          <div class="left">
+            <img src="login.svg" alt="alt text"/>
+          </div>
 
-  </body>
-  <footer id="footer">
-    <p id ="sosumi" style="float:left;">Must be located within the United States and above the age of 18 to register.</p>
-    <!-- <br> &copy; Nereus 2021 | All rights reserved. -->
-    <p style="float:right; margin-right: 20px">&copy; Nereus 2021 | All rights reserved.</p>
-  </footer>
-</html>
+          <div class="right">
+            <h2>Log In</h2>
+            <form class="log-form" action = "" method = "post">
+              <label for="username">Username:</label>
+              <input type="text" name="username" />
+            <br />
+            <label for="password">Password:</label>
+            <input type="password" name="password" />
+            <button type = "submit" class="login-button" id="login-button">Log In</button>
+            </form>
+            <button class="forgot-pass-button" id="forgot-pass-button">Forgot Password?</button>
+            <h3 class="log-h3">New to Nereus? Register <a href="register.html">here</a></h3>
+          </div>
+        </div>
+
+    </body>
+  </html>
+</DOCTYPE>
