@@ -4,23 +4,24 @@
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['username'];
         $password = $_POST['password'];
+        $emptyUP = false;
 
         if (empty($username) || empty($password)) {
-            echo("Please fill out all fields.");
-            return;
-        } 
+            echo "<div class=echo><h4>Please fill out all fields.</h4></div>";
+        } else {
 
         $sql = "SELECT * FROM accountInfo WHERE username='$username' AND password = '$password' LIMIT 1";
         $result = mysqli_query($conn, $sql);
         $user = mysqli_fetch_assoc($result);
 
         if (!$user) {
-            echo("This username or password is incorrect.");
+            echo "<div class=echo><h4>Username or password is incorrect.</h4></div>";         
         } else {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
             header('location: createProfile.html');
         }
+      }
 
 
      }
@@ -52,9 +53,9 @@
             <label for="password">Password:</label>
             <input type="password" name="password" />
             <button type = "submit" class="login-button" id="login-button">Log In</button>
-            </form>
             <button class="forgot-pass-button" id="forgot-pass-button">Forgot Password?</button>
-            <h3 class="log-h3">New to Nereus? Register <a href="register.html">here</a></h3>
+            </form>
+            <h3 class="log-h3">New to Nereus? Register <a href="register.php">here</a></h3>
           </div>
         </div>
 

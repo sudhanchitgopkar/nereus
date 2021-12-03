@@ -23,11 +23,12 @@
   
         if ($user) { // if user exists
             if ($user['username'] === $username) {
-                echo("Username already exists");
+
+
             } //if
 
             if ($user['email'] === $email) {
-               echo("email already exists");
+               echo "<div class=echo><h4 id=malign>Email already exists!</h4></div>";
             } //if
         } else {
             $query = "INSERT INTO accountInfo VALUES(NULL, '$username', '$password', '$email')";
@@ -70,10 +71,13 @@
            <br/>
            <label for="email">Email:</label>
            <input type="email" name="email"/>
+           <br>
+           <div class = "buttons">
            <button type="submit" class="register-button" id="registr-button">Register</button>
+           <button class="learn-more-button" id="learn-more-button">Learn More</button>
+          </div>
           </form>
-          <button class="learn-more-button" id="learn-more-button">Learn More</button>
-          <h3 class="reg-h3">Already have an account? Log in <a href="login.html">here</a></h3>
+          <h3 class="reg-h3">Already have an account? Log in <a href="LogIn.php">here</a></h3>
         </div>
 
       </div>
