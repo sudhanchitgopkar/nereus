@@ -24,10 +24,10 @@ CREATE TABLE profileInfo (
 	instagram varchar(60) NOT NULL,
 	twitter varchar(60) NOT NULL,
 	spotify varchar(60) NOT NULL,
-	PRIMARY KEY (accountID)
-)
+	PRIMARY KEY (accountID),
+	KEY(accountID));
 
-CREATE TABLE accountInfo ( accountID INT NOT NULL AUTO_INCREMENT , username VARCHAR(15) NOT NULL , password VARCHAR(15) NOT NULL , email VARCHAR(320) NOT NULL , PRIMARY KEY (accountID));
+CREATE TABLE accountInfo ( accountID INT NOT NULL AUTO_INCREMENT , username VARCHAR(15) NOT NULL , password VARCHAR(15) NOT NULL , email VARCHAR(320) NOT NULL , PRIMARY KEY (accountID), KEY(accountID));
 
 
 CREATE TABLE questionsInfo (
@@ -37,8 +37,7 @@ CREATE TABLE questionsInfo (
     three bit NOT NULL,
     four bit NOT NULL,
     five bit NOT NULL,
-	PRIMARY KEY (accountID)
-);
-
+	PRIMARY KEY (accountID),
+ 	KEY(accountID));
 
 INSERT INTO profileInfo VALUES (1,'h','saba', 'merchant','3rd yr cs major', '20', 'student', 'female','serious','male', '@svm','@svm','@svm'), (2,'h','v', 'yang','3rd yr cs major', '20', 'student', 'female','male' ,'serious','@vy','@vy','@vy'), (3, 'h','elodie', 'collier','3rd yr cs major', '20', 'student', 'female','male','serious', '@ec','@ec','@ec');
