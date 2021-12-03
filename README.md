@@ -42,7 +42,6 @@ CREATE TABLE profileInfo (
 	twitter varchar(60) NOT NULL,
 	spotify varchar(60) NOT NULL,
     username varchar(50),
-	PRIMARY KEY (picture),
     FOREIGN KEY (username) REFERENCES accountInfo(username)
 );
 
