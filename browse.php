@@ -72,6 +72,12 @@
             <br>
             <div >
                 <h1 style="text-align: center;">Your #1 Match:</h1>
+                <?php
+                    require('connDB.php');
+                    echo $username = $_POST['username'];
+                    echo "this is the php";
+
+                ?>
                 <div class="frontBox" style="display: inline-block;">
                     <div style="display: inline-block;margin-right: 250px !important;" class="circle">
                         <div style="padding-left: 190px;font-size: 30px;padding-top: 20px;">Sudhan Chitgopkar</div>

@@ -1,16 +1,4 @@
-# Nereus
-
-Contributors: [Sudhan Chitgopkar](https://sudhanchitgopkar.com), Saba Merchant, Elodie Collier, Venusly Yang
-
-This README is a work in Progress.
-
-## About Nereus
-
-Nereus is a dating application for UGA students built as final coursework for CSCI4300, Web Programming. 
-
-# SQL table GUI command
-
-	CREATE TABLE profileInfo (
+CREATE TABLE profileInfo (
     picture varchar(50) NOT NULL,   	
     firstName varchar(10) NOT NULL UNIQUE,
     lastName varchar(15) NOT NULL,
@@ -24,7 +12,6 @@ Nereus is a dating application for UGA students built as final coursework for CS
 	twitter varchar(60) NOT NULL,
 	spotify varchar(60) NOT NULL,
     username varchar(50),
-	PRIMARY KEY (picture),
     FOREIGN KEY (username) REFERENCES accountInfo(username)
 );
 
@@ -44,10 +31,3 @@ CREATE TABLE questionsInfo (
 	PRIMARY KEY (accountID),
  	FOREIGN KEY (username) REFERENCES accountInfo(username)
 );
-  
-    
-    
-
-
-
-INSERT INTO profileInfo VALUES (1,'h','saba', 'merchant','3rd yr cs major', '20', 'student', 'female','serious','male', '@svm','@svm','@svm'), (2,'h','v', 'yang','3rd yr cs major', '20', 'student', 'female','male' ,'serious','@vy','@vy','@vy'), (3, 'h','elodie', 'collier','3rd yr cs major', '20', 'student', 'female','male','serious', '@ec','@ec','@ec');
