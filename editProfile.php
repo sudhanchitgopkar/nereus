@@ -1,58 +1,61 @@
 <?php
-/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
-//$c = mysqli_connect("localhost", "root", "", "demo");
 require_once ('connDB.php'); 
 // Check connection
-if($conn=== false){
+if($conn== false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
+} else {
+    echo "connected";
 }
- 
-$first_name = mysqli_real_escape_string($conn, $_REQUEST['firstName']);
-$last_name = mysqli_real_escape_string($conn, $_REQUEST['lastName']);
-$bio = mysqli_real_escape_string($conn, $_REQUEST['bio']);
-$age = mysqli_real_escape_string($conn, $_REQUEST['age']);
-$jobTitle = mysqli_real_escape_string($conn, $_REQUEST['jobTitle']);
-$sex = $_POST['sex'];
-$lookingForSex = $_POST['lookingForSex'];
-$relationType = $_POST['relationType'];
-$instagram = mysqli_real_escape_string($conn, $_REQUEST['instagram']);
-$twitter = mysqli_real_escape_string($conn, $_REQUEST['twitter']);
-$spotify = mysqli_real_escape_string($conn, $_REQUEST['spotify']);
 
- 
+$username=mysqli_real_escape_string($conn, $_POST['username']);
+$firstName=mysqli_real_escape_string($conn, $_POST['firstName']);
+$lastName=mysqli_real_escape_string($conn, $_POST['lastName']);
+$bio=mysqli_real_escape_string($conn, $_POST['bio']);
+$age=mysqli_real_escape_string($conn, $_POST['age']);
+$jobTitle=mysqli_real_escape_string($conn, $_POST['jobTitle']);
+$sex=mysqli_real_escape_string($conn, $_POST['sex']);
+$lookingForSex=mysqli_real_escape_string($conn, $_POST['lookingForSex']);
+$relationType=mysqli_real_escape_string($conn, $_POST['relationType']);
+$instagram=mysqli_real_escape_string($conn, $_POST['instagram']);
+$twitter=mysqli_real_escape_string($conn, $_POST['twitter']);
+$spotify=mysqli_real_escape_string($conn, $_POST['spotify']);
 
-$question1 = $_POST['wouldYouRather1'];
-$question2 = $_POST['wouldYouRather2'];
-$question3 = $_POST['wouldYouRather3'];
-$question4 = $_POST['wouldYouRather4'];
-$question5 = $_POST['wouldYouRather5'];
-echo $question1;
-echo $question2;
-echo $question3;
-echo $question4;
-echo $question5;
+$Q1=mysqli_real_escape_string($conn, $_POST['wouldYouRather1']);
+$Q2=mysqli_real_escape_string($conn, $_POST['wouldYouRather2']);
+$Q3=mysqli_real_escape_string($conn, $_POST['wouldYouRather3']);
+$Q4=mysqli_real_escape_string($conn, $_POST['wouldYouRather4']);
+$Q5=mysqli_real_escape_string($conn, $_POST['wouldYouRather5']);
 
-$sql = "UPDATE INTO profileInfo (firstName, lastName, bio, age, jobTitle, sex, lookingForSex, relationType, instagram, twitter, spotify) VALUES ('$first_name', '$last_name', '$bio','$age', '$jobTitle', '$sex', '$lookingForSex', '$relationType', '$instagram', '$twitter', '$spotify');";
-$query = "UPDATE INTO questionsInfo (one,two,three,four,five) VALUES ('$question1', '$question2', '$question3','$question4', '$question5');";
+echo $age;
+$sql = "UPDATE profileInfo SET firstName='$firstName',lastName='$lastName',bio='$bio',age='$age',jobTitle='$jobTitle',sex='$sex',lookingForSex='$lookingForSex',relationType='$relationType',instagram='$instagram',twitter='$twitter', spotify='$spotify' WHERE username='$username' ";
+$sql2 = "UPDATE questionsInfo SET one='$Q1',two='$Q2',three='$Q3',four='$Q4',five='$Q5' WHERE username='$username' ";
+
+
 if(mysqli_query($conn, $sql)){
-    if(mysqli_query($conn, $query)){
-        echo "Records added successfully profile and questions.";
+    if(mysqli_query($conn, $sql2)){
+        // header('location: browse.php');
+        echo "Records edited successfully profile and questions.";
+        echo "SUCCESS";
+
     } else {
-        echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
+        // include('error.html');
+        echo "fuck you" ;
+
+        echo "ERROR: Could not able to execute $sql2.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
     }
 } else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+
+    // include('error.html');
+    echo "fuck you" ;
+
+    echo "ERROR: Could not able to execute $sql.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
 }
-// $query = "INSERT INTO questionsInfo (one,two,three,four,five) VALUES ('$question1', '$question2', '$question3','$question4', '$question5');";
-// if(mysqli_query($conn, $sql)){
-//     echo "Records added successfully questions.";
-// } else{
-//     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-// }
 
 
-
-// Close connection
-mysqli_close($conn);
+    // if(mysqli_query($conn, $sql)) {
+    //     echo "SUCCESS";
+    // } else {
+    //     echo "fuck you" ;
+    // }
+    // echo 'suucess;';
 ?>

@@ -9,6 +9,7 @@ if($conn=== false){
 }
  
 $first_name = mysqli_real_escape_string($conn, $_REQUEST['firstName']);
+$username = mysqli_real_escape_string($conn, $_REQUEST['username']);
 $last_name = mysqli_real_escape_string($conn, $_REQUEST['lastName']);
 $bio = mysqli_real_escape_string($conn, $_REQUEST['bio']);
 $age = mysqli_real_escape_string($conn, $_REQUEST['age']);
@@ -19,7 +20,7 @@ $relationType = $_POST['relationType'];
 $instagram = mysqli_real_escape_string($conn, $_REQUEST['instagram']);
 $twitter = mysqli_real_escape_string($conn, $_REQUEST['twitter']);
 $spotify = mysqli_real_escape_string($conn, $_REQUEST['spotify']);
-
+$picture = (" idk");
  
 
 $question1 = $_POST['wouldYouRather1'];
@@ -27,32 +28,42 @@ $question2 = $_POST['wouldYouRather2'];
 $question3 = $_POST['wouldYouRather3'];
 $question4 = $_POST['wouldYouRather4'];
 $question5 = $_POST['wouldYouRather5'];
-echo $question1;
-echo $question2;
-echo $question3;
-echo $question4;
-echo $question5;
 
-$sql = "INSERT INTO profileInfo (firstName, lastName, bio, age, jobTitle, sex, lookingForSex, relationType, instagram, twitter, spotify) VALUES ('$first_name', '$last_name', '$bio','$age', '$jobTitle', '$sex', '$lookingForSex', '$relationType', '$instagram', '$twitter', '$spotify');";
-$query = "INSERT INTO questionsInfo (one,two,three,four,five) VALUES ('$question1', '$question2', '$question3','$question4', '$question5');";
+
+$sql = "INSERT INTO profileInfo (username, firstName, lastName, picture, bio, age, jobTitle, sex, lookingForSex, relationType, instagram, twitter, spotify) VALUES ('$username', '$first_name', '$last_name', '$picture', '$bio','$age', '$jobTitle', '$sex', '$lookingForSex', '$relationType', '$instagram', '$twitter', '$spotify');";
+$query = "INSERT INTO questionsInfo (one,two,three,four,five, username) VALUES ('$question1', '$question2', '$question3','$question4', '$question5','$username');";
 if(mysqli_query($conn, $sql)){
     if(mysqli_query($conn, $query)){
-        echo "Records added successfully profile and questions.";
+        header('location: browse.php');
+        // echo "Records added successfully profile and questions. MAKE HTML FILE FOR GO BACK";
     } else {
-        echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
+        // include('error.html');
+        echo "ERROR: Could not able to execute $query.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
     }
 } else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+
+    // include('error.html');
+
+    echo "ERROR: Could not able to execute $sql.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
 }
-// $query = "INSERT INTO questionsInfo (one,two,three,four,five) VALUES ('$question1', '$question2', '$question3','$question4', '$question5');";
-// if(mysqli_query($conn, $sql)){
-//     echo "Records added successfully questions.";
+// $alterTable = "ALTER TABLE profileInfo ADD FOREIGN KEY (username) REFERENCES accountInfo(username);";
+// $alterTableQ = "ALTER TABLE questionsInfo ADD FOREIGN KEY (username) REFERENCES accountInfo(username);";
+// if(mysqli_query($conn, $alterTable)){
+//     if(mysqli_query($conn, $alterTableQ)){
+//         header('location: browse.php');
+//         // echo "Records added successfully profile and questions. MAKE HTML FILE FOR GO BACK";
+//     } else {
+//         // include('error.html');
+//         echo "ERROR: Could not able to execute $alterTableQ.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
+//     }
 // } else{
-//     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+
+//     // include('error.html');
+
+//     echo "ERROR: Could not able to execute $alterTable.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
 // }
-
-
-
 // Close connection
 mysqli_close($conn);
+// include('browse.php');
+
 ?>
