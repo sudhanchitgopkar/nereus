@@ -31,7 +31,7 @@
                echo "<div class=echo><h4 id=malign>Email already exists!</h4></div>";
             } //if
         } else {
-            $query = "INSERT INTO accountInfo VALUES(NULL, '$username', '$password', '$email')";
+            $query = "INSERT INTO accountInfo VALUES('$username', '$password', '$email')";
   	        mysqli_query($conn, $query);
   	        $_SESSION['username'] = $username;
   	        $_SESSION['success'] = "You are now logged in";
