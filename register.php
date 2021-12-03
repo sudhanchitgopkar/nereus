@@ -7,14 +7,14 @@
         $email = $_POST['email'];
 
         if (empty($username) || empty($password) || empty($email)) {
-            echo("Please fill out all fields.");
-            return;
+            echo "<div class=echo><h4 id=malign>Please fill out all fields.</h4></div>";
+            // return;
         } 
 
-        if (strlen($password) < 7) {
-            echo("Password must be more than 6 characters.");
-            return;
-        }
+        else if (strlen($password) < 7) {
+            echo "<div class=echo><h4 id=malign>Password must be more than 6 characters.</h4></div>";
+            // return;
+        } else {
 
         $checkDuplicate = "SELECT * FROM accountInfo WHERE username='$username' OR email='$email' LIMIT 1";
         $result = mysqli_query($conn, $checkDuplicate);
@@ -23,8 +23,7 @@
   
         if ($user) { // if user exists
             if ($user['username'] === $username) {
-
-
+              echo "<div class=echo><h4 id=malign>Username already exists!</h4></div>";
             } //if
 
             if ($user['email'] === $email) {
@@ -35,12 +34,11 @@
   	        mysqli_query($conn, $query);
   	        $_SESSION['username'] = $username;
   	        $_SESSION['success'] = "You are now logged in";
-            header('location: createProfile.html');
+            header('location: createprofilenew.html');
             }
-
-
-     }
-
+          }
+        }
+     
 ?>
 
 <DOCTYPE! html>
