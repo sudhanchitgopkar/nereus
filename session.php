@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    if(!isset($_SESSION['accountID'])) {
+    if(!isset($_SESSION['username'])) {
         header("Location: LogIn.php");
     }
 ?>
