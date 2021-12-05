@@ -45,7 +45,7 @@
                     <div id="myDropdown" class="dropdown-content">
                         <a href="index.html">Home</a>
                         <a href="browse.php">Browse</a>
-                        <a href="#contact">Log Out</a>
+                        <a href="logOut.php">Log Out</a>
                     </div>
                 </div>
             </div>
