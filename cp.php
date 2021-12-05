@@ -11,9 +11,31 @@
         <div>
             <span  class="N-logo">N.</span>
         <br>
-        <div class="header">
-            <h1>Create Your Profile</h1>
-            <p>Tell us a bit about yourself!</p>
+        <?php
+                    require('connDB.php');
+                    session_start();
+                    if(!isset($_SESSION['username'])) {
+                        header(string: "Location: LogIn.php");
+                        exit();
+                    }
+                    $username = $_SESSION['username'];
+                    $url = "browse.php?username=" . $username;
+                    // echo "this is the username";
+                    // echo $username;
+                    // echo "this is the php";
+
+                ?>
+        <div>
+            <div>
+                <h1>Create Your Profile</h1>
+                <h2>Tell us a bit about yourself!</h2>
+            </div>
+            <!-- <h1>Create Your Profile</h1>
+            <h2>Tell us a bit about yourself!</h2> -->
+            <!-- <br>
+            <br> -->
+            <h3><?php echo "this is the username";
+                    echo $username; ?></h3>
             
         </div>
         <div class="right">
@@ -21,8 +43,7 @@
         </div>
         <div class="circle"></div>
 
-        <h1>TESTING Form</h1>
-        <form action="cp.php" method="post" >
+        <form action="createProfile.php" method="post" >
             <div style="margin-left: 550px;">
                     <label for="firstName">First Name:</label>
                     <input type="text" name="firstName" id="firstName">

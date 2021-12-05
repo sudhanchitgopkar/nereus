@@ -45,7 +45,7 @@
                     <div id="myDropdown" class="dropdown-content">
                         <a href="index.html">Home</a>
                         <a href="browse.php">Browse</a>
-                        <a href="#contact">Log Out</a>
+                        <a href="logOut.php">Log Out</a>
                     </div>
                 </div>
             </div>
@@ -74,25 +74,111 @@
                 <h1 style="text-align: center;">Your #1 Match:</h1>
                 <?php
                     require('connDB.php');
-                    echo $username = $_POST['username'];
-                    echo "this is the php";
+                    session_start();
+                    
+                    if(!isset($_SESSION['username'])) {
+                        header("Location: LogIn.php");
+                        // exit();
+                    } else 
+                    $username = $_SESSION['username'];
+                    $url = "browse.php?username=" . $username;
+                    echo "Hello: ";
+                    echo $username;
+                    // echo "this is the php";
 
+                    $userQ = "SELECT one,two,three,four,five FROM questionsInfo WHERE '$username'=username";
+                    $query_runUserQ = mysqli_query($conn, $userQ);
+                    $row3= mysqli_num_rows($query_runUserQ) > 0;
+                    if($row3) {
+                        while ($row6 = mysqli_fetch_array($query_runUserQ)) {
+                            $one = $row6['one'];
+                            $two = $row6['two'];
+                            $three = $row6['three'];
+                            $four = $row6['four'];
+                            $five = $row6['five'];
+                        }
+                    }
+                    echo $one;
+                    echo $two;
+                    echo $three;
+                    echo $four;
+                    echo $five;
+
+
+
+                    $query1 = "SELECT * FROM questionsInfo";
+                    $query_run1 = mysqli_query($conn, $query1);
+                    $check_user = mysqli_num_rows($query_run1) > 0;
+                    // echo $row3;
+                    $count = 0;
+                    $maxCount = -1;
+                    $holdMatch = "";
+                    if($check_user){
+                        while($col = mysqli_fetch_array($query_run1) ) {
+                            $count = 0;
+
+                            if($one == $col['one']) {
+                                $count++;
+                            }
+                            if($two == $col['two']) {
+                                $count++;
+                            }
+                            if($three == $col['three']) {
+                                $count++;
+                            }
+                            if($four == $col['four']) {
+                                $count++;
+                            }
+                            if($five == $col['five']) {
+                                $count++;
+                            }
+                            if($maxCount < $count) {
+                                if($col['username'] != $username) {
+                                    $maxCount = $count;
+                                    // echo $maxCount;
+                                    $holdMatch = $col['username'];
+                                    // echo $holdMatch;
+                                }
+                            }
+
+                        }
+                    }
+            
                 ?>
-                <div class="frontBox" style="display: inline-block;">
-                    <div style="display: inline-block;margin-right: 250px !important;" class="circle">
-                        <div style="padding-left: 190px;font-size: 30px;padding-top: 20px;">Sudhan Chitgopkar</div>
-                    </div>
-                    <div style="font-size: 17px; text-align:center"> 
-                        <br>
-                        <p>Hi! This is my bio. I might say some cheesy shit here, or tell a half-assed joke.</p>
-                        <br>
-                        <div>
-                            <p><b>Professional Memer</b></p>
-                            <p>Instagram • Twitter • Facebook</p>
-                        </div>
-                        
-                    </div>
-                </div>
+                <?php  
+                    $printMatch = "SELECT * from profileInfo WHERE '$holdMatch'=username";
+                    $pM = mysqli_query($conn, $printMatch);
+                    $pMChek = mysqli_num_rows($pM) > 0;
+
+                    if($pMChek) {
+                        while($PM = mysqli_fetch_array($pM)){
+                ?> 
+                            <div class="frontBox" style="display: inline-block;">
+                                <div style="display: inline-block;margin-right: 250px !important;" class="circle">
+                                    <div style="padding-left: 190px;font-size: 30px;padding-top: 20px;"><?php echo $PM['firstName'] . " <br>"; echo $PM['lastName'];?></div>
+                                </div>
+                                <div style="font-size: 17px; text-align:center"> 
+                                    <br>
+                                    <?php echo $PM['bio'] . "<br>";?>
+                                    <br>
+                                    <div>
+                                    <br>
+                                                <b><?php echo $PM['jobTitle'] . "<br>";?></b>
+                                                <a href> <?php $PM['instagram'];?>instagram</a>
+                                                <a href> <?php $PM['spotify'];?>spotify</a>
+                                                <a href> <?php $PM['twitter'];?>twitter</a>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                <?php
+                        } //while
+                    } else {
+                        echo "No Match Found";
+                    }
+
+                ?> 
+                
             </div>
             
             <div>
@@ -139,9 +225,9 @@
                                                 <?php echo $row['bio'] . "<br>";?>
                                                 <br>
                                                 <b><?php echo $row['jobTitle'] . "<br>";?></b>
-                                                <?php echo $row['instagram'];?>
-                                                <?php echo $row['spotify'];?>
-                                                <?php echo $row['twitter'];?>
+                                                <a href> <?php $row['instagram'];?>instagram</a>
+                                                <a href> <?php $row['spotify'];?>spotify</a>
+                                                <a href> <?php $row['twitter'];?>twitter</a>
                                                 
                                             </p>
                                         </div>

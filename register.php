@@ -1,4 +1,8 @@
 <?php
+    session_set_cookie_params(0);
+   
+    session_start();
+
     require('connDB.php');
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,21 +36,36 @@
         } else {
             $query = "INSERT INTO accountInfo VALUES('$username', '$password', '$email')";
   	        mysqli_query($conn, $query);
-            session_start();
-            if(!isset($_SESSION['username'])) {
-              echo "session is not set";
-            } else {
-              echo "session is set";
-              echo '<br /><a href="createProfile.html?' . SID . '">page 2</a>';
-              echo '<br /><a href="createProfile.php?' . SID . '">page 3</a>';
+            if(isset($_SESSION['username'])) {
+              // $url = "browse.php"
+              // $url = "browse.php";
+              // header(string: 'Location: ' . "browse.php");
+  
+              header('Location: cp.php');
+              exit();
+            } else if (isset($_POST['username'])) {
+              $username = $_POST['username'];
+              $_SESSION['username'] = $username;
+              $url = "cp.php";
+              // header('Location: browse.php');
+  
+              header(string: 'Location: ' . "cp.php");
+              exit();
+            }
+            // if(!isset($_SESSION['username'])) {
+            //   echo "session is not set";
+            // } else {
+            //   echo "session is set";
+            //   echo '<br /><a href="createProfile.html?' . SID . '">page 2</a>';
+            //   echo '<br /><a href="createProfile.php?' . SID . '">page 3</a>';
 
             
-            }
+            // }
 
-  	        $_SESSION['username'] = $username;
-            echo $_SESSION['username'];
-  	        $_SESSION['success'] = "You are now logged in";
-            header('location: createProfile.html');
+  	        // $_SESSION['username'] = $username;
+            // echo $_SESSION['username'];
+  	        // $_SESSION['success'] = "You are now logged in";
+            // header('location: createProfile.html');
             }
           }
         }
