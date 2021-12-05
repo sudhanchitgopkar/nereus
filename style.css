@@ -1,0 +1,216 @@
+body {
+    display: flex;
+    background: #EDEDED;
+    background-repeat: no-repeat;
+    background-image: url('diversity.jpeg');
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+}
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    border-radius: 30px;
+  }
+
+.row {
+    max-width: 50vw;
+    color: #ededed;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.row:hover {
+    box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
+}
+
+input {
+    background-color: #DBDBDB;
+    border-radius: 5px;
+    border: solid 1px #1a1a1a;
+    padding-left: 5px;
+    width: 14vw;
+}
+
+input:hover {
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    color: #1a1a1a;
+}
+
+#loginimg {
+    object-fit: cover;
+    height: 50vh;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-right: solid 1px #1a1a1a;
+}
+
+.accbtn {
+    border-radius: 5px;
+    border-style: none;
+    background-color: #FDAB30;
+    color: #EDEDED;
+    padding: 5px 10px;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.accbtn:hover {
+    opacity: 1;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.regbtn {
+    border-radius: 5px;
+    border-style: none;
+    background-color: #1a1a1a;
+    color: #EDEDED;
+    padding: 5px 10px;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.regbtn:hover {
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);   
+}
+
+h1 {
+    color: #1a1a1a;
+}
+
+h3 {
+    color: #5D5D5D;
+}
+
+p {
+    color: #5D5D5D;
+}
+
+.row {
+    background-color: #edededcc;
+}
+
+.mainbody {
+    height: 90vh;
+    width: 100vw;
+}
+
+a{
+    text-decoration: underline;
+    color: #5D5D5D;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #FDAB30;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  nav {
+      min-width: 100vw;
+      max-height: 10vh;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: #f5f5f5ca;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: #f5f5f5;
+    border-top: solid 1px #1a1a1a;    
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255, 160, 19, 0.4) 0%, rgba(237,237,237,0) 100%);
+
+  }
+  
+  .N-logo { 
+    color:black;
+    position:absolute;
+    left:41px;
+    top:25px;
+    font-family:Roboto;
+    text-align:left;
+    font-size:60px;
+    }
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+  .dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+    border-radius: 30px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #EDEDED;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+    border-radius: 20px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+
+  .dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .show {display: block;}
+
