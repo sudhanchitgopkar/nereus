@@ -9,8 +9,8 @@ if($conn=== false){
 }
  
 $first_name = mysqli_real_escape_string($conn, $_REQUEST['firstName']);
-// $username = mysqli_real_escape_string($conn, $_REQUEST['username']);
-echo $_SESSION['username']; // green
+$username = mysqli_real_escape_string($conn, $_REQUEST['username']);
+// echo $_SESSION['username']; // green
 $last_name = mysqli_real_escape_string($conn, $_REQUEST['lastName']);
 $bio = mysqli_real_escape_string($conn, $_REQUEST['bio']);
 $age = mysqli_real_escape_string($conn, $_REQUEST['age']);
