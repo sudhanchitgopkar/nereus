@@ -33,20 +33,31 @@
             $query = "INSERT INTO accountInfo VALUES('$username', '$password', '$email')";
   	        mysqli_query($conn, $query);
             session_start();
-            if(!isset($_SESSION['username'])) {
-              echo "session is not set";
-            } else {
-              echo "session is set";
-              echo '<br /><a href="createProfile.html?' . SID . '">page 2</a>';
-              echo '<br /><a href="createProfile.php?' . SID . '">page 3</a>';
+            if(isset($_SESSION['username'])) {
+              $url = "cp.php"
+              header(string: 'Location: ' . $url);
+              exit();
+            } else if (isset($_POST['username'])) {
+              $username = $_POST['username'];
+              $_SESSION['username'] = $username;
+              $url = "cp.php";
+              header(string: 'Location: ' . $url);
+              exit();
+            }
+            // if(!isset($_SESSION['username'])) {
+            //   echo "session is not set";
+            // } else {
+            //   echo "session is set";
+            //   echo '<br /><a href="createProfile.html?' . SID . '">page 2</a>';
+            //   echo '<br /><a href="createProfile.php?' . SID . '">page 3</a>';
 
             
-            }
+            // }
 
-  	        $_SESSION['username'] = $username;
-            echo $_SESSION['username'];
-  	        $_SESSION['success'] = "You are now logged in";
-            header('location: createProfile.html');
+  	        // $_SESSION['username'] = $username;
+            // echo $_SESSION['username'];
+  	        // $_SESSION['success'] = "You are now logged in";
+            // header('location: createProfile.html');
             }
           }
         }

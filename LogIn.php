@@ -1,6 +1,6 @@
 <?php
     require('connDB.php');
-
+    
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -17,9 +17,21 @@
         if (!$user) {
             echo "<div class=echo><h4>Username or password is incorrect.</h4></div>";         
         } else {
+          session_start();
+          if(isset($_SESSION['username'])) {
+            $url = "browse.php"
+            header(string: 'Location: ' . $url);
+            exit();
+          } else if (isset($_POST['username'])) {
+            $username = $_POST['username'];
             $_SESSION['username'] = $username;
-            $_SESSION['success'] = "You are now logged in";
-            header('location: browse.php');
+            $url = "browse.php";
+            header(string: 'Location: ' . $url);
+            exit();
+          }
+            // $_SESSION['username'] = $username;
+            // $_SESSION['success'] = "You are now logged in";
+            // header('location: browse.php');
         }
       }
 
@@ -49,7 +61,7 @@
             <form class="log-form" action = "" method = "post">
               <label for="username">Username:</label>
               <input type="text" name="username" />
-            <br />
+            <br/>
             <label for="password">Password:</label>
             <input type="password" name="password" />
             <button type = "submit" class="login-button" id="login-button">Log In</button>

@@ -74,7 +74,15 @@
                 <h1 style="text-align: center;">Your #1 Match:</h1>
                 <?php
                     require('connDB.php');
-                    echo $username = $_POST['username'];
+                    session_start();
+                    if(!isset($_SESSION['username'])) {
+                        header(string: "Location: LogIn.php");
+                        exit();
+                    }
+                    $username = $_SESSION['username'];
+                    $url = "browse.php?username=" . $username;
+                    echo "this is the username";
+                    echo $username;
                     echo "this is the php";
 
                 ?>
