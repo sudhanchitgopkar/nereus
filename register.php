@@ -41,12 +41,12 @@
               // $url = "browse.php";
               // header(string: 'Location: ' . "browse.php");
   
-              header('Location: cp.php');
+              header('Location: profile.html');
               exit();
             } else if (isset($_POST['username'])) {
               $username = $_POST['username'];
               $_SESSION['username'] = $username;
-              $url = "cp.php";
+              $url = "profile.html";
               header('Location: browse.php');
   
               //header(string: 'Location: ' . "cp.php");

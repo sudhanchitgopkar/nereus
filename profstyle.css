@@ -85,19 +85,19 @@ input[type="file"] {
     max-width: 29vw;
 }
 
-input[name="q1"],
-input[name="q2"],
-input[name="q3"],
-input[name="q4"],
-input[name="q5"] {
+input[name="wouldYouRather1"],
+input[name="wouldYouRather2"],
+input[name="wouldYouRather3"],
+input[name="wouldYouRather4"],
+input[name="wouldYouRather5"] {
     display: none;
 }
 
-input[name="q1"]+label,
-input[name="q2"]+label,
-input[name="q3"]+label,
-input[name="q4"]+label,
-input[name="q5"]+label {
+input[name="wouldYouRather1"]+label,
+input[name="wouldYouRather2"]+label,
+input[name="wouldYouRather3"]+label,
+input[name="wouldYouRather4"]+label,
+input[name="wouldYouRather5"]+label {
     /* style passive state as you like */
     border: solid 1px #1a1a1a;
     background-color: #dbdbdb;
@@ -108,11 +108,11 @@ input[name="q5"]+label {
     margin-top: 1vh;
 }
 
-input[name="q1"]:checked+label,
-input[name="q2"]:checked+label,
-input[name="q3"]:checked+label,
-input[name="q4"]:checked+label,
-input[name="q5"]:checked+label {
+input[name="wouldYouRather1"]:checked+label,
+input[name="wouldYouRather2"]:checked+label,
+input[name="wouldYouRather3"]:checked+label,
+input[name="wouldYouRather4"]:checked+label,
+input[name="wouldYouRather5"]:checked+label {
     /* style checked state as you like */
     border: solid 1px #1a1a1a;
     background-color: #FDAB30;
