@@ -34,8 +34,8 @@ CREATE TABLE questionsInfo (
 
 
 
-INSERT INTO accountInfo VALUES ('sabamerchant', 'lolololol', 'saba@gmail.com), ('venus', 'helpmeplslol','venus@gmail.com'), ('lod', 'helpmeplslol1','lod@gmail.com'), ('sudhan', 'helpmeplslol3','dud@gmail.com');
+INSERT INTO accountInfo VALUES ('sabamerchant', 'lolololol', 'saba@gmail.com'), ('venus', 'helpmeplslol','venus@gmail.com'), ('lod', 'helpmeplslol1','lod@gmail.com'), ('sudhan', 'helpmeplslol3','dud@gmail.com');
 
 INSERT INTO profileInfo VALUES ('0','saba','merchant','help me this is saba', '21', 'studnwt', 'Male', 'Female','serious','jjdsl','sdlkf','sldfkm','sabamerchant'), ('0','venusly','yang','hi yo im venus','21','stuendt','Female','Male','serious','khf','sds','dsf','venus');
 
-INSERT INTO questionsInfo VALUES ('0','1','2','1','2','2','sabamerchant'), ('0','1','2','1','2','2','venus';
+INSERT INTO questionsInfo VALUES ('0','1','2','1','2','2','sabamerchant'), ('0','1','2','1','2','2','venus');
