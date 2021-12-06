@@ -35,9 +35,6 @@ $relationType = $_POST['relationType'];
 $instagram = mysqli_real_escape_string($conn, $_REQUEST['instagram']);
 $twitter = mysqli_real_escape_string($conn, $_REQUEST['twitter']);
 $spotify = mysqli_real_escape_string($conn, $_REQUEST['spotify']);
-
- 
-
 $question1 = $_POST['wouldYouRather1'];
 $question2 = $_POST['wouldYouRather2'];
 $question3 = $_POST['wouldYouRather3'];
@@ -58,8 +55,7 @@ if(mysqli_query($conn, $sql)){
 } else{
 
     // include('error.html');
-
-    echo "ERROR: Could not able to execute $sql.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
+echo "ERROR: Could not able to execute $sql.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
 }
 // $alterTable = "ALTER TABLE profileInfo ADD FOREIGN KEY (username) REFERENCES accountInfo(username);";
 // $alterTableQ = "ALTER TABLE questionsInfo ADD FOREIGN KEY (username) REFERENCES accountInfo(username);";
