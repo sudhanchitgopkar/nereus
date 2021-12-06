@@ -49,23 +49,7 @@
                     </div>
                 </div>
             </div>
-            
-
-
-            <!-- <div style="display: inline-block;padding-top: 40px !important;">
-                <div class="N-logo">N.</div>
-                <div class="navbar" style="padding-left: 1000px !important; display: inline-block;">
-                    <button class="dropbtn" onclick="myFunction()">Dropdown
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="myDropdown">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                
-            </div> -->
+        
             <br>
             <br>
             <br>
@@ -156,6 +140,7 @@
                             <div class="frontBox" style="display: inline-block;">
                                 <div style="display: inline-block;margin-right: 250px !important;" class="circle">
                                     <div style="padding-left: 190px;font-size: 30px;padding-top: 20px;"><?php echo $PM['firstName'] . " <br>"; echo $PM['lastName'];?></div>
+                                    <img src="propic.jpg" class="profileCircle" alt="User Images" style="display: inline-block;">
                                 </div>
                                 <div style="font-size: 17px; text-align:center"> 
                                     <br>
@@ -198,15 +183,7 @@
                         // video stuff
                         $query_run = mysqli_query($conn, $sql);
                         $check_user = mysqli_num_rows($query_run) > 0;
-                        // echo mysqli_num_rows($query_run);
-                        // echo "this is check user:";
-                        // echo $check_user . "<br>";
-                        // video stuff
-                        // $result = $conn->query($sql);
-                        // foreach($result as $row) {
-                        //     echo "line44";
-                        //     echo $row['username'] . "<br>";
-                        // } 
+                
                         
                         if($check_user) {
                             while($row = mysqli_fetch_array($query_run)){

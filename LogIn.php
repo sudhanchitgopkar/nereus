@@ -22,9 +22,7 @@
             echo "<div class=echo><h4>Username or password is incorrect.</h4></div>";         
         } else {
           if(isset($_SESSION['username'])) {
-            // $url = "browse.php"
-            // $url = "browse.php";
-            // header(string: 'Location: ' . "browse.php");
+          
 
             header('Location: browse.php');
             exit();
@@ -32,14 +30,12 @@
             $username = $_POST['username'];
             $_SESSION['username'] = $username;
             $url = "browse.php";
-            // header('Location: browse.php');
+            header('Location: browse.php');
 
-            header(string: 'Location: ' . "browse.php");
+            //header(string: 'Location: ' . "browse.php");
             exit();
           }
-            // $_SESSION['username'] = $username;
-            // $_SESSION['success'] = "You are now logged in";
-            // header('location: browse.php');
+
         }
       }
 
