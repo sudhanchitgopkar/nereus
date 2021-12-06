@@ -12,7 +12,7 @@
 
 <body>
     <div class="container pt-5 pb-2">
-        <div class="row head">
+        <div class="row head" style="margin-left: 450px;font-size: -webkit-xxx-large;">
             <?php
             require('connDB.php');
             session_start();
@@ -77,7 +77,7 @@
             ?>
         </div>
         <div class="row mb-2">
-            <h3 class=""> Your top match is:</h3>
+            <h3 style="margin-left: 470px;"> Your top match is:</h3>
         </div>
         <?php
         $printMatch = "SELECT * from profileInfo WHERE '$holdMatch'=username";
@@ -88,10 +88,10 @@
             while ($PM = mysqli_fetch_array($pM)) {
         ?>
                 <div class="container pt-2">
-                    <div class="card mb-3" style="max-width: 30vw;">
-                        <div class="row">
+                    <div class="card mb-3" style="max-width: 40vw;margin-left: 280px;">
+                        <div class="row" >
                             <div class="col-md-4">
-                                <img src="https://www.georgiacenter.uga.edu/sites/default/files/sauga-2021-elodie-collier.jpg">
+                                <img src="https://www.georgiacenter.uga.edu/sites/default/files/sauga-2021-elodie-collier.jpg" style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -139,8 +139,8 @@
                     while ($row = mysqli_fetch_array($query_run)) {
 
                 ?>
-                        <div class="col-xl-3 col-sm-6 mb-5">
-                            <div class="bg-white rounded  shadow-sm py-5 px-4 text-center">
+                        <div class="col-xl-3 col-sm-6 mb-5" style="height: 396px;margin-bottom: 0px;">
+                            <div class="bg-white rounded  shadow-sm py-5 px-4 text-center" style="height: 396px;">
                                 <img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                                 <h5 class="mb-0"><?php echo $row['firstName'] . " <br>";
                                                     echo $row['lastName']; ?></h5>
