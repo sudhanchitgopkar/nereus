@@ -1,7 +1,6 @@
 CREATE TABLE accountInfo (username VARCHAR(30) NOT NULL , password VARCHAR(30) NOT NULL , email VARCHAR(320) NOT NULL , PRIMARY KEY (username));
 
 CREATE TABLE profileInfo (
-    picture varchar(50) NOT NULL,   	
     firstName varchar(10) NOT NULL UNIQUE,
     lastName varchar(15) NOT NULL,
 	bio varchar(150) NOT NULL,
@@ -21,7 +20,6 @@ CREATE TABLE profileInfo (
 
 
 CREATE TABLE questionsInfo (
-	accountID int NOT NULL AUTO_INCREMENT, 
     one int NOT NULL,
     two int NOT NULL,
     three int NOT NULL,
@@ -34,8 +32,8 @@ CREATE TABLE questionsInfo (
 
 
 
-INSERT INTO accountInfo VALUES ('sabamerchant', 'lolololol', 'saba@gmail.com), ('venus', 'helpmeplslol','venus@gmail.com'), ('lod', 'helpmeplslol1','lod@gmail.com'), ('sudhan', 'helpmeplslol3','dud@gmail.com');
+INSERT INTO accountInfo VALUES ('sabamerchant', 'lolololol', 'saba@gmail.com), ('venus', 'password@12','venus@gmail.com'), ('lod', 'passw%rd','lod@gmail.com'), ('sudhan', 'l#l3l#l','dude@gmail.com');
 
-INSERT INTO profileInfo VALUES ('0','saba','merchant','help me this is saba', '21', 'studnwt', 'Male', 'Female','serious','jjdsl','sdlkf','sldfkm','sabamerchant'), ('0','venusly','yang','hi yo im venus','21','stuendt','Female','Male','serious','khf','sds','dsf','venus');
+INSERT INTO profileInfo VALUES ('saba','merchant','help me this is saba', '21', 'studnwt', 'Male', 'Female','serious','jjdsl','sdlkf','sldfkm','sabamerchant'), ('venusly','yang','hi yo im venus','21','stuendt','Female','Male','serious','khf','sds','dsf','venus');
 
-INSERT INTO questionsInfo VALUES ('0','1','2','1','2','2','sabamerchant'), ('0','1','2','1','2','2','venus';
+INSERT INTO questionsInfo VALUES ('1','2','1','2','2','sabamerchant'), ('1','2','1','2','2','venus'), ('2','2','2','2','2','lod'), ('1','1','1','1,'1','sudhan' );
