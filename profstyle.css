@@ -1,0 +1,120 @@
+body {
+    background: url(login.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+}
+
+.row {
+    max-width: 30vw;
+}
+
+.profile-container {
+    background-color: #efececc2;
+    border-radius: 30px;
+    max-width: 50vw;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.form-control {
+    background-color: #dbdbdbbd;
+    border-radius: 5px;
+    border: solid 1px #1a1a1a;
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
+.form-check-input:checked {
+    background-color: #FDAB30;
+    border: 1px solid #1a1a1a;
+}
+
+.form-check-input {
+    background-color: #dbdbdb;
+}
+
+label {
+    margin-bottom: 3px;
+}
+
+input[type="file"] {
+    margin-left: 10px;
+    max-width: 29vw;
+}
+
+input[name="q1"],
+input[name="q2"],
+input[name="q3"],
+input[name="q4"],
+input[name="q5"] {
+    display: none;
+}
+
+input[name="q1"]+label,
+input[name="q2"]+label,
+input[name="q3"]+label,
+input[name="q4"]+label,
+input[name="q5"]+label {
+    /* style passive state as you like */
+    border: solid 1px #1a1a1a;
+    background-color: #dbdbdb;
+    padding: 2% 3%;
+    border-radius: 10px;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    margin-top: 1vh;
+}
+
+input[name="q1"]:checked+label,
+input[name="q2"]:checked+label,
+input[name="q3"]:checked+label,
+input[name="q4"]:checked+label,
+input[name="q5"]:checked+label {
+    /* style checked state as you like */
+    border: solid 1px #1a1a1a;
+    background-color: #FDAB30;
+}
+
