@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="profstyle.css">
 
 
-    <title>Hello, world!</title>
+    <title>Create Profile</title>
 </head>
 
 <body>
@@ -31,37 +31,37 @@
 
         <div class="row">
 
-            <form>
+            <form action = "createProfile.php" method = "post">
                 
                 <div class="form-group">
 
-                    <div class="row mb-1">
+                    <!-- <div class="row mb-1">
                         <label>Profile Picture</label>
                         <input class="form-control" type="file" id="formFile">
-                      </div>
+                      </div> -->
 
                     <div class="row mb-1">
                         <label>General</label>
                         <div class="col-5">
-                            <input type="text" class="form-control" id="firstname" placeholder="First name">
+                            <input type="text" class="form-control" id="firstname" placeholder="First name" name="firstName">
                         </div>
                         <div class="col-4">
-                            <input type="text" class="form-control" id="lastname" placeholder="Last name">
+                            <input type="text" class="form-control" id="lastname" placeholder="Last name" name="lastName">
                         </div>
                         <div class="col-3">
-                            <input type="number" class="form-control" id="age" placeholder="Age">
+                            <input type="number" class="form-control" id="age" placeholder="Age" name="age">
                         </div>
                         <small>* Must be 18 years or older to create a profile.</small>
                     </div>
-
+<!-- 
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="r.hendricks">
+                    <input type="text" class="form-control" id="username" placeholder="r.hendricks"> -->
 
                     <label for="bio">Bio</label>
-                    <textarea class="form-control " rows="4" maxlength="100"
+                    <textarea name="bio" class="form-control " rows="4" maxlength="100"
                         placeholder="Describe yourself here..."></textarea>
                     <label for="job">Occupation</label>
-                    <input type="text" class="form-control" id="job" placeholder="Software Dev">
+                    <input type="text" class="form-control" id="job" name= "jobTitle" placeholder="Software Dev">
 
                     <div class="radiogroup my-2">
                         <label for="sex">Sex</label>
@@ -84,15 +84,15 @@
                         <label for="seeking">Seeking</label>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="seeking" id="male" value="male">
+                            <input class="form-check-input" type="radio" name="lookingForSex" id="male" value="male">
                             <label class="form-check-label" for="male">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="seeking" id="female" value="female">
+                            <input class="form-check-input" type="radio" name="lookingForSex" id="female" value="female">
                             <label class="form-check-label" for="female">Female</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="seeking" id="other" value="other">
+                            <input class="form-check-input" type="radio" name="lookingForSex" id="other" value="other">
                             <label class="form-check-label" for="other">Other</label>
                         </div>
                     </div>
@@ -101,69 +101,71 @@
                         <label for="rtype">Relationship Wanted</label>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="rtype" id="serious" value="serious">
+                            <input class="form-check-input" type="radio" name="relationType" id="serious" value="serious">
                             <label class="form-check-label" for="serious">Serious</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="rtype" id="friends" value="friends">
+                            <input class="form-check-input" type="radio" name="relationType" id="friends" value="friends">
                             <label class="form-check-label" for="friends">Friends</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="rtype" id="fling" value="fling">
+                            <input class="form-check-input" type="radio" name="relationType" id="fling" value="fling">
                             <label class="form-check-label" for="fling">Fling</label>
                         </div>
 
                         <div class="row mb-1">
                             <label>Social Media URLs</label>
                             <div class="col-4">
-                                <input type="text" class="form-control" placeholder="Instagram">
+                                <input type="text" class="form-control" placeholder="Instagram" name ="instagram">
                             </div>
                             <div class="col-4">
-                                <input type="text" class="form-control" placeholder="Twitter">
+                                <input type="text" class="form-control" placeholder="Twitter" name = "twitter">
                             </div>
                             <div class="col-4">
-                                <input type="text" class="form-control" placeholder="Spotify">
+                                <input type="text" class="form-control" placeholder="Spotify" name = "spotify">
                             </div>
                         </div>
                         <hr>
                         <p class="text-center">Now help us get to know you better!</p>
                         <label for="wyr">Would you rather...</label>
                         <br>
-                        <input id="q1a1" type="radio" name="q1">
+                        <input id="q1a1" type="radio" name="wouldYouRather1" value ="1">
                         <label for="q1a1">Be eaten by a lion</label>
                         OR
-                        <input id="q1a2" type="radio" name="q1">
+                        <input id="q1a2" type="radio" name="wouldYouRather1" value ="2">
                         <label for="q1a2">Be eaten by ants</label>
 
                         <br>
-                        <input id="q2a1" type="radio" name="q2">
+                        <input id="q2a1" type="radio" name="wouldYouRather2" value ="1">
                         <label for="q2a1">Know how you die</label>
                         OR
-                        <input id="q2a2" type="radio" name="q2">
+                        <input id="q2a2" type="radio" name="wouldYouRather2" value ="2">
                         <label for="q2a2">Know when you die</label>
 
                         <br>
-                        <input id="q3a1" type="radio" name="q3">
+                        <input id="q3a1" type="radio" name="wouldYouRather3" value ="1">
                         <label for="q3a1">Become Gandalf</label>
                         OR
-                        <input id="q3a2" type="radio" name="q3">
+                        <input id="q3a2" type="radio" name="wouldYouRather3" value ="2">
                         <label for="q3a2">Become Dumbledore</label>
 
                         <br>
-                        <input id="q4a1" type="radio" name="q4">
+                        <input id="q4a1" type="radio" name="wouldYouRather4" value ="1">
                         <label for="q4a1">Wear comfy clothes</label>
                         OR
-                        <input id="q4a2" type="radio" name="q4">
+                        <input id="q4a2" type="radio" name="wouldYouRather4" value ="2">
                         <label for="q4a2">Wear stylish clothes</label>
 
                         <br>
-                        <input id="q5a1" type="radio" name="q5">
+                        <input id="q5a1" type="radio" name="wouldYouRather5"value ="1">
                         <label for="q5a1">Become very rich</label>
                         OR
-                        <input id="q5a2" type="radio" name="q5">
+                        <input id="q5a2" type="radio" name="wouldYouRather5" value ="2">
                         <label for="q5a2">Become very famous</label>
                     </div>
                 </div>
+                <br>
+                <input type = "submit" value ="Submit" class= "accbtn">
             </form>
         </div>
     </div>
