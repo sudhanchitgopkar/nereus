@@ -33,7 +33,7 @@ $sql2 = "UPDATE questionsInfo SET one='$Q1',two='$Q2',three='$Q3',four='$Q4',fiv
 
 if(mysqli_query($conn, $sql)){
     if(mysqli_query($conn, $sql2)){
-        // header('location: browse.php');
+        header('location: newbrowse.php');
         echo "Records edited successfully profile and questions.";
         echo "SUCCESS";
 
