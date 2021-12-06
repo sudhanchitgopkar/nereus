@@ -60,45 +60,20 @@
     <title>Log In</title>
 </head>
 
-<body><script type="text/javascript">
-  /* When the user clicks on the button, 
-  toggle between hiding and showing the dropdown content */
-  function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-  }
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+        <a class="navbar-brand" href="index.html">Nereus.</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="aboutus.html">About Us</a>
+                <a class="nav-item nav-link" href="newbrowse.php">Browse</a>
+                <a class="nav-item nav-link" href="LogIn.php">Login</a>
+                <a class="nav-item nav-link" href="ep.html">Edit Profile</a>
+                <a class="nav-item nav-link" href="logOut.php">Logout</a>
+            </div>
+        </div>
+    </nav>
 
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-              }
-          }
-      }
-  }
-</script>
-<div style="text-align:center;">
-  <div>
-      <div class="N-logo"><a href="#">N.</a></div>
-      <div class="dropdown" style="padding-top: 38px !important; margin-right: 30px;">
-          <button onclick="myFunction()" class="dropbtn">
-              <!-- Dropdown -->
-              <div class="hamburger"></div>
-              <div class="hamburger"></div>
-              <div class="hamburger"></div>
-          </button>
-          <div id="myDropdown" class="dropdown-content">
-              <a href="#">Home</a>
-              <a href="#">Browse</a>
-              <a href="#">Log Out</a>
-          </div>
-      </div>
-  </div>
-    
     <div class="mainbody d-flex">
         <div class="container d-flex justify-content-center my-auto">
             <div class="row g-0" id="logrow">
@@ -127,9 +102,7 @@
                     </form>
                 </div>
             </div>
-       
         </div>
-    <!---</div>--->
 </body>
 </html>
 
