@@ -121,8 +121,8 @@
                             <button class="regbtn">Forgot Password</button>
                         </div>
                         <div class="form-row">
-                            <p class="mb-0"> New to Nereus? Register <a href="registerNew.html">here</a>.</p>
-                            <p> or learn more about us <a href="">here</a>.</p>
+                            <p class="mb-0"> New to Nereus? Register <a href="register.php">here</a>.</p>
+                            <p> or learn more about us <a href="aboutus.html">here</a>.</p>
                         </div>
                     </form>
                 </div>
