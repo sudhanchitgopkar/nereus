@@ -24,13 +24,13 @@
           if(isset($_SESSION['username'])) {
           
 
-            header('Location: browse.php');
+            header('Location: newbrowse.php');
             exit();
           } else if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $_SESSION['username'] = $username;
             $url = "browse.php";
-            header('Location: browse.php');
+            header('Location: newbrowse.php');
 
             //header(string: 'Location: ' . "browse.php");
             exit();
@@ -43,7 +43,8 @@
      }
 
 ?>
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -56,7 +57,7 @@
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-    <title>Hello, world!</title>
+    <title>Log In</title>
 </head>
 
 <body><script type="text/javascript">

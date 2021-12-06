@@ -140,7 +140,7 @@
 
                 ?>
                         <div class="col-xl-3 col-sm-6 mb-5" style="height: 396px;margin-bottom: 0px;">
-                            <div class="bg-white rounded  shadow-sm py-5 px-4 text-center" style="height: 396px;">
+                            <div class="bg-white rounded shadow-sm py-5 px-4 text-center" style="height: 396px;">
                                 <img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                                 <h5 class="mb-0"><?php echo $row['firstName'] . " <br>";
                                                     echo $row['lastName']; ?></h5>
