@@ -47,7 +47,7 @@
               $username = $_POST['username'];
               $_SESSION['username'] = $username;
               $url = "profile.html";
-              header('Location: browse.php');
+              header('Location: profile.html');
   
               //header(string: 'Location: ' . "cp.php");
               exit();
