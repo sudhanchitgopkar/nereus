@@ -79,13 +79,13 @@
                     if(!isset($_SESSION['username'])) {
                         header("Location: LogIn.php");
                         // exit();
-                    } else {
+                    } else 
                     $username = $_SESSION['username'];
                     $url = "browse.php?username=" . $username;
                     echo "Hello: ";
                     echo $username;
                     // echo "this is the php";
-                    }
+
                     $userQ = "SELECT one,two,three,four,five FROM questionsInfo WHERE '$username'=username";
                     $query_runUserQ = mysqli_query($conn, $userQ);
                     $row3= mysqli_num_rows($query_runUserQ) > 0;
