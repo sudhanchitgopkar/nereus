@@ -1,24 +1,24 @@
-.color {
-  color: #FDAB30;
-}
-
-.hamburger {
-  width: 30px;
-  height: 3px;
-  background-color: black;
-  margin: 4px 0;
-  border-radius: 30px;
-}
 
 .topBar {
   padding-left: 1050px;
   display: inline-block; 
 }
 
+.head {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 
 body {
-background-image:linear-gradient(111.57deg, #EDEDED 0%, #FDAB30 150%);;
+  background-color: #FFF8F7;
+  background-repeat: no-repeat;
+  background-image: url('heartbanner.jpg');
+  background-size: contain;
+  background-color: rgba(255,255,255,0.6);
+  background-blend-mode: lighten;
 }
+
 .font {
   font-family: Nunito;
 }
@@ -145,3 +145,37 @@ font-size:60px;
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover, .social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+
+.profilecard {
+  max-width: 30vw;
+  display: inline-block;
+  border-radius: 30px;
+  border: solid 5px in
+}
+
+.topmatch {
+  min-width: 100vw;
+  background: rgb(253,171,48);
+background: linear-gradient(90deg, rgba(253,171,48,0.5536589635854341) 0%, rgba(237,237,237,1) 50%, rgba(253,171,48,0.42200630252100846) 100%);
+}
+
+ 
