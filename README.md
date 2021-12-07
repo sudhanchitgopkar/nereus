@@ -37,3 +37,11 @@ INSERT INTO accountInfo VALUES ('sabamerchant', 'lolololol', 'saba@gmail.com), (
 INSERT INTO profileInfo VALUES ('Saba','Merchant','Looking for a good time', '21', 'student', 'Female', 'Male','Serious','https://www.instagram.com/saba_merchant123/',' https://twitter.com/SabaMerchant6',' https://open.spotify.com/user/fhk5k0ei207rdsw76iv5kggaz?si=f44bfd8b52194d3b%27,,%27sabamerchant%27), ('Venusly','Yang','8 feet tall CS Major','21','barista','Female','Male','Serious','https://www.instagram.com/venusly.y/%27,%27https://twitter.com/%27,%27https://open.spotify.com/%27,%27venus%27), ('Elodie','Collier','I love to dance and tell funny jokes', '21', 'Tutor', 'Other', 'Female','Friends','https://www.instagram.com/elodiecollier/%27,%27https://twitter.com/elodiecollier%27,%27https://open.spotify.com/%27,%27lod%27)(%27Sudhan%27,%27Chitgopkar%27,%27color and font boy', '20', 'Intern', 'Male', 'Male','Fling',' https://www.instagram.com/not.sudhan/%27,%27https://twitter.com/%27,%27https://open.spotify.com/user/sudhan.chitgopkar?si=92f9aeb83e5f40ee%27,%27sudhan%27);
 
 INSERT INTO questionsInfo VALUES ('1','2','1','2','2','sabamerchant'), ('1','2','1','2','2','venus'), ('1','1','2','2','2','sudhan'), ('2','2','2','2','2','lod');
+
+
+
+
+INSERT INTO accountInfo VALUES ('sabamerchant', 'myPasswo@rd', 'saba@gmail.com'), ('venus', 'password@12','venus@gmail.com'), ('lod', 'passw%rd','lod@gmail.com'), ('sudhan', 'p@$$w0rd','dude@gmail.com'), ('joanne', 'thisPassW%rd','joanne@gmail.com'), ('jeffery', 'myP@$$w0rd','jeffery@gmail.com');
+
+
+INSERT INTO questionsInfo VALUES ('1','2','1','2','2','sabamerchant'), ('1','2','1','2','2','venus'), ('1','1','2','2','2','sudhan'), ('2','2','2','2','2','lod'), ('1','1','1','1','1','joanne'), ('2','1','2','1','2','jeffery');

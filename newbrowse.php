@@ -147,7 +147,10 @@
                                 <span class="small text-uppercase text-muted"><?php echo $row['jobTitle'] . "<br>"; ?></span>
                                 <?php echo $row['bio'] . "<br>"; ?>
                                 <ul class="social mb-0 list-inline mt-3">
-                                    <li class="list-inline-item"><a href class="social-link"><i class="fa fa-twitter"></i><?php $row['instagram']; ?></a></li>
+                                    <li><a href> <?php $row['instagram'];?>instagram</a></li>
+
+                                    <!-- <li class="list-inline-item"><a href class="social-link"><i class="fa fa-twitter"></i><?php $row['instagram']; ?></a></li> -->
+                                    <!-- <li class="list-inline-item"><a href class="social-link"><i class="fa fa-twitter"></i><?php $row['instagram']; ?></a></li> -->
                                     <li class="list-inline-item"><a href class="social-link"><i class="fa fa-instagram"></i><?php $row['instagram']; ?></a></li>
                                     <li class="list-inline-item"><a href class="social-link"><i class="fa fa-spotify"></i><?php $row['instagram']; ?></a></li>
                                 </ul>
