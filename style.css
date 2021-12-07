@@ -94,6 +94,8 @@ p {
 }
 
 .mainbody {
+    position:absolute;
+    bottom: 0%;
     height: 90vh;
     width: 100vw;
 }

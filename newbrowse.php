@@ -11,6 +11,18 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+        <a class="navbar-brand" href="index.html">Nereus.</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="aboutus.html">About Us</a>
+                <a class="nav-item nav-link" href="newbrowse.php">Browse</a>
+                <a class="nav-item nav-link" href="LogIn.php">Login</a>
+                <a class="nav-item nav-link" href="ep.html">Edit Profile</a>
+                <a class="nav-item nav-link" href="logOut.php">Logout</a>
+            </div>
+        </div>
+    </nav>
     <div class="container pt-5 pb-2">
         <div class="row head" style="margin-left: 450px;font-size: -webkit-xxx-large;">
             <?php
@@ -91,7 +103,7 @@
                     <div class="card mb-3" style="max-width: 40vw;margin-left: 280px;">
                         <div class="row" >
                             <div class="col-md-4">
-                                <img src="https://www.georgiacenter.uga.edu/sites/default/files/sauga-2021-elodie-collier.jpg" style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;">
+                                <img src="genericprofile.jpg" style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px; width:200px">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -99,9 +111,9 @@
                                                             echo $PM['lastName']; ?></h5>
                                     <p class="card-text"><?php echo $PM['bio'] . "<br>"; ?></p>
                                     <ul class="social mb-0 list-inline my-3">
-                                        <li class="list-inline-item"><a href class="social-link"><i class="fa fa-twitter"></i><?php $PM['instagram']; ?></a></li>
-                                        <li class="list-inline-item"><a href class="social-link"><i class="fa fa-instagram"></i><?php $PM['instagram']; ?></a></li>
-                                        <li class="list-inline-item"><a href class="social-link"><i class="fa fa-spotify"></i><?php $PM['instagram']; ?></a></li>
+                                        <li class="list-inline-item"><a href="<?php echo $PM['twitter']; ?>" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a href="<?php echo $PM['instagram']; ?>" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                                        <li class="list-inline-item"><a href="<?php echo $PM['spotify']; ?>" class="social-link"><i class="fa fa-spotify"></i></a></li>
                                     </ul>
                                     <p class="card-text"><small class="text-muted">Top match using Nereus.</small></p>
                                 </div>
@@ -141,18 +153,24 @@
                 ?>
                         <div class="col-xl-3 col-sm-6 mb-5" style="height: 396px;margin-bottom: 0px;">
                             <div class="bg-white rounded shadow-sm py-5 px-4 text-center" style="height: 396px;">
-                                <img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                                <img src="genericprofile.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                                 <h5 class="mb-0"><?php echo $row['firstName'] . " <br>";
                                                     echo $row['lastName']; ?></h5>
                                 <span class="small text-uppercase text-muted"><?php echo $row['jobTitle'] . "<br>"; ?></span>
                                 <?php echo $row['bio'] . "<br>"; ?>
                                 <ul class="social mb-0 list-inline mt-3">
+<<<<<<< HEAD
                                     <li><a href> <?php $row['instagram'];?>instagram</a></li>
 
                                     <!-- <li class="list-inline-item"><a href class="social-link"><i class="fa fa-twitter"></i><?php $row['instagram']; ?></a></li> -->
                                     <!-- <li class="list-inline-item"><a href class="social-link"><i class="fa fa-twitter"></i><?php $row['instagram']; ?></a></li> -->
                                     <li class="list-inline-item"><a href class="social-link"><i class="fa fa-instagram"></i><?php $row['instagram']; ?></a></li>
                                     <li class="list-inline-item"><a href class="social-link"><i class="fa fa-spotify"></i><?php $row['instagram']; ?></a></li>
+=======
+                                    <li class="list-inline-item"><a href="<?php echo $row['twitter']; ?>" class="social-link"><i class="fa fa-twitter"></i><?php $row['instagram']; ?></a></li>
+                                    <li class="list-inline-item"><a href="<?php echo $row['instagram']; ?>" class="social-link"><i class="fa fa-instagram"></i><?php $row['instagram']; ?></a></li>
+                                    <li class="list-inline-item"><a href="<?php echo $row['spotify']; ?>" class="social-link"><i class="fa fa-spotify"></i><?php $row['instagram']; ?></a></li>
+>>>>>>> 790b610e96dc0cce42a0453818fed32b4a9051f9
                                 </ul>
                             </div>
                         </div>
@@ -167,6 +185,13 @@
         </div>
     </div>
 </body>
+
+<footer class="text-center text-lg-start bg-light text-muted">
+    <div class="text-center p-3" style="background-color: #edededcc;font-size: small;">
+        &#169; Nereus 2021. All Rights Reserved. Users must be 18 and older.
+        <!-- <a class="text-dark" href="index.html">Nereus</a> -->
+    </div>
+</footer>
 
 <!---
 
