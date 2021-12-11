@@ -214,5 +214,21 @@ a {
     border-radius: 20px;
   }
   
+.echo {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 10%;
+  height: 5vh;
+  width: 24vw;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h6 {
+    color: #5D5D5D;
+    text-align: center;
+    padding-top: 3%;
+}
+
   .show {display: block;}
 

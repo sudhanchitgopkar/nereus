@@ -11,12 +11,12 @@
         $email = $_POST['email'];
       // below is doing input validation with ensuring the password is more than 7 and the none of the fields are empty.
         if (empty($username) || empty($password) || empty($email)) {
-            echo "<div class=echo><h4 id=malign>Please fill out all fields.</h4></div>";
+            echo "<div class=echo><h6 id=malign>Please fill out all fields.</h6></div>";
             // return;
         } 
 
         else if (strlen($password) < 7) {
-            echo "<div class=echo><h4 id=malign>Password must be more than 6 characters.</h4></div>";
+            echo "<div class=echo><h6 id=malign>Password must be more than 6 characters.</h6></div>";
             // return;
         } else {
           //here we check for duplicates within the db if you want to create a new account
@@ -27,11 +27,11 @@
   
         if ($user) { // if user exists
             if ($user['username'] === $username) {
-              echo "<div class=echo><h4 id=malign>Username already exists!</h4></div>";
+              echo "<div class=echo><h6 id=malign>Username already exists!</h6></div>";
             } //if
 
             if ($user['email'] === $email) {
-               echo "<div class=echo><h4 id=malign>Email already exists!</h4></div>";
+               echo "<div class=echo><h6 id=malign>Email already exists!</h46</div>";
             } //if
         } else {
           //if user name does not exist, we can create a new account and insdert it into the db

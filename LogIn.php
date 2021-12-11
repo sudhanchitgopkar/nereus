@@ -11,7 +11,7 @@
         $emptyUP = false;
 
         if (empty($username) || empty($password)) {
-            echo "<div class=echo><h4>Please fill out all fields.</h4></div>";
+            echo "<div class=echo><h6>Please fill out all fields.</h6></div>";
         } else {
           //does input validation and ensures the user exists and password matches
         $sql = "SELECT * FROM accountInfo WHERE username='$username' AND password = '$password' LIMIT 1";
@@ -19,7 +19,7 @@
         $user = mysqli_fetch_assoc($result);
 
         if (!$user) {
-            echo "<div class=echo><h4>Username or password is incorrect.</h4></div>";         
+            echo "<div class=echo><h6>Username or password is incorrect.</h6></div>";         
         } else {
           //if user successfully signs in then set session variables and move them to the browse page to view matches
           if(isset($_SESSION['username'])) {
