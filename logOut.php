@@ -1,4 +1,5 @@
 <?php
+    // creates a session puts it in an array and then destroys the session with the current user and log in
     session_start();
     $_SESSION = array();
     session_destroy();
@@ -19,6 +20,8 @@
 </head>
 
 <body> 
+        <!-- This is our tool bar at the top thats consistent to all pages. Allows users to jump page to page easily. -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
         <a class="navbar-brand" href="index.html">Nereus.</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -26,7 +29,7 @@
                 <a class="nav-item nav-link" href="aboutus.html">About Us</a>
                 <a class="nav-item nav-link" href="newbrowse.php">Browse</a>
                 <a class="nav-item nav-link" href="LogIn.php">Login</a>
-                <a class="nav-item nav-link" href="ep.html">Edit Profile</a>
+                <a class="nav-item nav-link" href="ep.php">Edit Profile</a>
                 <a class="nav-item nav-link" href="logOut.php">Logout</a>
             </div>
         </div>
@@ -39,6 +42,7 @@
                     <img class="img-fluid" src="diversity.jpeg" id="loginimg">
                 </div>
                 <div class="col-lg-6 pt-5 px-5">
+                    <!-- Message displayed when logged out. -->
                     <h1>You've successfully logged out!</h1>
                     <form>
                        

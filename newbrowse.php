@@ -11,6 +11,7 @@
 </head>
 
 <body>
+        <!-- This is our tool bar at the top thats consistent to all pages. Allows users to jump page to page easily. -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
         <a class="navbar-brand" href="index.html">Nereus.</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -18,7 +19,7 @@
                 <a class="nav-item nav-link" href="aboutus.html">About Us</a>
                 <a class="nav-item nav-link" href="newbrowse.php">Browse</a>
                 <a class="nav-item nav-link" href="LogIn.php">Login</a>
-                <a class="nav-item nav-link" href="ep.html">Edit Profile</a>
+                <a class="nav-item nav-link" href="ep.php">Edit Profile</a>
                 <a class="nav-item nav-link" href="logOut.php">Logout</a>
             </div>
         </div>
@@ -28,7 +29,7 @@
             <?php
             require('connDB.php');
             session_start();
-
+            //checks to see if session has started and ensures user is logged in + has variable of username stored
             if (!isset($_SESSION['username'])) {
                 header("Location: LogIn.php");
             } else {
@@ -37,7 +38,7 @@
                 echo "Hello, ";
                 echo $username;
             }
-
+            //saves the loggedin user's information to variables for easy access
             $userQ = "SELECT one,two,three,four,five FROM questionsInfo WHERE '$username'=username";
             $query_runUserQ = mysqli_query($conn, $userQ);
             $row3 = mysqli_num_rows($query_runUserQ) > 0;
@@ -50,7 +51,8 @@
                     $five = $row6['five'];
                 }
             }
-
+            //compares loggedIn user's information to the database and displays the number of questions they have answered
+            //that match with everyone else. It ensure you do not match with yourself as well.
             $query1 = "SELECT * FROM questionsInfo";
             $query_run1 = mysqli_query($conn, $query1);
             $check_user = mysqli_num_rows($query_run1) > 0;
@@ -92,6 +94,7 @@
             <h3 style="margin-left: 470px;"> Your top match is:</h3>
         </div>
         <?php
+        //here we print out every person in the db so you can scroll through everyone 
         $printMatch = "SELECT * from profileInfo WHERE '$holdMatch'=username";
         $pM = mysqli_query($conn, $printMatch);
         $pMChek = mysqli_num_rows($pM) > 0;

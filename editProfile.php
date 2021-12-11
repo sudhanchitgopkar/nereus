@@ -6,7 +6,7 @@ if($conn== false){
 } else {
     echo "connected";
 }
-
+//calls the information from ep.php and stores it in variables to update the db
 $username=mysqli_real_escape_string($conn, $_POST['username']);
 $firstName=mysqli_real_escape_string($conn, $_POST['firstName']);
 $lastName=mysqli_real_escape_string($conn, $_POST['lastName']);
@@ -34,28 +34,22 @@ $sql2 = "UPDATE questionsInfo SET one='$Q1',two='$Q2',three='$Q3',four='$Q4',fiv
 if(mysqli_query($conn, $sql)){
     if(mysqli_query($conn, $sql2)){
         header('location: newbrowse.php');
-        echo "Records edited successfully profile and questions.";
-        echo "SUCCESS";
+        // "Records edited successfully profile and questions.";
+        // "SUCCESS";
 
     } else {
         // include('error.html');
-        echo "fuck you" ;
 
-        echo "ERROR: Could not able to execute $sql2.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
+        // "ERROR: Could not able to execute $sql2. 
     }
 } else{
 
     // include('error.html');
-    echo "fuck you" ;
 
-    echo "ERROR: Could not able to execute $sql.  MAKE HTML FILE FOR GO BACK" . mysqli_error($conn);
+    // "ERROR: Could not able to execute $sql.  
 }
 
 
-    // if(mysqli_query($conn, $sql)) {
-    //     echo "SUCCESS";
-    // } else {
-    //     echo "fuck you" ;
-    // }
-    // echo 'suucess;';
+  
 ?>
+

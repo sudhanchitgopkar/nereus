@@ -4,7 +4,7 @@
     session_start();
 
     require('connDB.php');
-
+    //connects to db
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -13,7 +13,7 @@
         if (empty($username) || empty($password)) {
             echo "<div class=echo><h4>Please fill out all fields.</h4></div>";
         } else {
-
+          //does input validation and ensures the user exists and password matches
         $sql = "SELECT * FROM accountInfo WHERE username='$username' AND password = '$password' LIMIT 1";
         $result = mysqli_query($conn, $sql);
         $user = mysqli_fetch_assoc($result);
@@ -21,6 +21,7 @@
         if (!$user) {
             echo "<div class=echo><h4>Username or password is incorrect.</h4></div>";         
         } else {
+          //if user successfully signs in then set session variables and move them to the browse page to view matches
           if(isset($_SESSION['username'])) {
           
 
@@ -68,7 +69,7 @@
                 <a class="nav-item nav-link" href="aboutus.html">About Us</a>
                 <a class="nav-item nav-link" href="newbrowse.php">Browse</a>
                 <a class="nav-item nav-link" href="LogIn.php">Login</a>
-                <a class="nav-item nav-link" href="ep.html">Edit Profile</a>
+                <a class="nav-item nav-link" href="ep.php">Edit Profile</a>
                 <a class="nav-item nav-link" href="logOut.php">Logout</a>
             </div>
         </div>
