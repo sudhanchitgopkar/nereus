@@ -6,8 +6,8 @@
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/8201081510.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="browse.css">
-    <title>Browse</title>
+    <link rel="stylesheet" href="./style/browse.css">
+    <title>Nereus | Browse</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <a class="navbar-brand" href="index.html">Nereus.</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="aboutus.html">About Us</a>
+            <a class="nav-item nav-link" href="./static/aboutus.html">About Us</a>
                 <a class="nav-item nav-link" href="newbrowse.php">Browse</a>
                 <a class="nav-item nav-link" href="LogIn.php">Login</a>
                 <a class="nav-item nav-link" href="ep.php">Edit Profile</a>
@@ -106,7 +106,7 @@
                     <div class="card mb-3" style="max-width: 40vw;margin-left: 280px;">
                         <div class="row" >
                             <div class="col-md-4">
-                                <img src="genericprofile.jpg" style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px; width:200px">
+                                <img src="./images/genericprofile.jpg" style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px; width:200px">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -156,7 +156,7 @@
                 ?>
                         <div class="col-xl-3 col-sm-6 mb-5" style="height: 396px;margin-bottom: 0px;">
                             <div class="bg-white rounded shadow-sm py-5 px-4 text-center" style="height: 396px;">
-                                <img src="genericprofile.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                                <img src="./images/genericprofile.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                                 <h5 class="mb-0"><?php echo $row['firstName'] . " <br>";
                                                     echo $row['lastName']; ?></h5>
                                 <span class="small text-uppercase text-muted"><?php echo $row['jobTitle'] . "<br>"; ?></span>
